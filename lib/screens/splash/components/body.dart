@@ -10,6 +10,7 @@ import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 import 'package:shop_app/components/switch_language.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:shop_app/size_config.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -40,6 +41,7 @@ class _BodyState extends State<Body> {
         width: double.infinity,
         child: Column(
           children: <Widget>[
+            SizedBox(height: getProportionateScreenHeight(10)),
             SwitchLang(),
             Expanded(
               flex: 5,
