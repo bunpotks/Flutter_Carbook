@@ -8,7 +8,8 @@ import 'package:shop_app/size_config.dart';
 // This is the best practice
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:shop_app/components/switch_language.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -17,28 +18,29 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   int currentPage = 0;
-  List<Map<String, String>> splashData = [
-    {
-      "text": "Welcome to CarBooking, Let’s shop!",
-      "image": "assets/images/sp_1.webp"
-    },
-    {
-      "text":
-          "We help people conect with store \naround United State of America",
-      "image": "assets/images/sp_2.webp"
-    },
-    {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/sp_3.webp"
-    },
-  ];
+
   @override
   Widget build(BuildContext context) {
+    List<Map<String, String>> splashData = [
+      {
+        "text": AppLocalizations.of(context)!.splash_desc1,
+        "image": "assets/images/sp_1.webp"
+      },
+      {
+        "text": AppLocalizations.of(context)!.splash_desc2,
+        "image": "assets/images/sp_2.webp"
+      },
+      {
+        "text": AppLocalizations.of(context)!.splash_desc3,
+        "image": "assets/images/sp_3.webp"
+      },
+    ];
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
         child: Column(
           children: <Widget>[
+            SwitchLang(),
             Expanded(
               flex: 5,
               child: PageView.builder(
@@ -71,7 +73,7 @@ class _BodyState extends State<Body> {
                     ),
                     Spacer(flex: 3),
                     DefaultButton(
-                      text: "Continue",
+                      text: AppLocalizations.of(context)!.splash_continue,
                       press: () {
                         Navigator.pushNamed(context, SignInScreen.routeName);
                       },

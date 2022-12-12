@@ -19,7 +19,6 @@ class SplashContent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Spacer(),
-          Text(AppLocalizations.of(context)!.helloWorld),
           Text(
             "CarBooking",
             style: TextStyle(
