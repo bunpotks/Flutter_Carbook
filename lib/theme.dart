@@ -10,7 +10,7 @@ ThemeData theme() {
       appBarTheme: appBarTheme(),
       textTheme: textTheme(),
       inputDecorationTheme: inputDecorationTheme(),
-      visualDensity: VisualDensity.adaptivePlatformDensity,
+      // visualDensity: VisualDensity.adaptivePlatformDensity,
       pageTransitionsTheme: PageTransitionsTheme(
         builders: {
           TargetPlatform.android: CupertinoPageTransitionsBuilder(),

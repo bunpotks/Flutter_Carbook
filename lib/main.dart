@@ -6,6 +6,7 @@ import 'package:shop_app/screens/splash/splash_screen.dart';
 import 'package:shop_app/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 bool? is_Login;
 
@@ -29,20 +30,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Locale _locale = Locale('th');
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: theme(),
+      locale: _locale,
       localizationsDelegates: [
+        AppLocalizations.delegate, // Add this line
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: [
         Locale('en', ''), // English, no country code
-        Locale('es', ''), // Spanish, no country code
+        Locale('th', ''), // Spanish, no country cod
       ],
       initialRoute:
           widget.isLogin! ? HomeScreen.routeName : SplashScreen.routeName,

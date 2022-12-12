@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SplashContent extends StatelessWidget {
   const SplashContent({
@@ -18,6 +19,7 @@ class SplashContent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Spacer(),
+          Text(AppLocalizations.of(context)!.helloWorld),
           Text(
             "CarBooking",
             style: TextStyle(
