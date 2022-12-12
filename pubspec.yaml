@@ -82,6 +82,12 @@ flutter:
           weight: 700
         - asset: assets/fonts/lato/Lato-BlackItalic.ttf
           style: italic
+    - family: Ibm
+      fonts:
+        - asset: assets/fonts/ibm/IBMPlexSansThai-Regular.ttf
+        - asset: assets/fonts/ibm/IBMPlexSansThai-Bold.ttf
+          weight: 600
+
     
   #   - family: Trajan Pro
   #     fonts:

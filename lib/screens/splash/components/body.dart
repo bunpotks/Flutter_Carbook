@@ -25,7 +25,7 @@ class _BodyState extends State<Body> {
     List<Map<String, String>> splashData = [
       {
         "text": AppLocalizations.of(context)!.splash_desc1,
-        "image": "assets/images/sp_1.webp"
+        "image": "assets/images/splash_intro.gif"
       },
       {
         "text": AppLocalizations.of(context)!.splash_desc2,

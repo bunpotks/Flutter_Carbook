@@ -12,7 +12,6 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        
         // print("Focus");
         FocusManager.instance.primaryFocus?.unfocus();
       },
@@ -27,7 +26,7 @@ class SearchField extends StatelessWidget {
           decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(
                   horizontal: getProportionateScreenWidth(10),
-                  vertical: getProportionateScreenWidth(9)),
+                  vertical: getProportionateScreenWidth(12)),
               border: InputBorder.none,
               focusedBorder: InputBorder.none,
               enabledBorder: InputBorder.none,

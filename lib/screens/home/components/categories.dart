@@ -29,20 +29,27 @@ class Categories extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: List.generate(
-            categories.length,
-            (index) => CategoryCard(
-              icon: categories[index]["icon"],
-              text: categories[index]["text"],
-              press: () {
-                switch (categories[index]['text']) {
-                  case 'Notification':
-                    break;
-                  default:
-                }
-              },
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: List.generate(
+                categories.length,
+                (index) => CategoryCard(
+                  icon: categories[index]["icon"],
+                  text: categories[index]["text"],
+                  press: () {
+                    switch (categories[index]['text']) {
+                      case 'Notification':
+                        break;
+                      default:
+                    }
+                  },
+                ),
+              ),
             ),
-          ),
+            SizedBox(width: getProportionateScreenWidth(20))
+          ],
         ),
       ),
     );
