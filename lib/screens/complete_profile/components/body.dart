@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/size_config.dart';
-
 import 'complete_profile_form.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -17,19 +17,15 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.03),
-                Text("Complete Profile", style: headingStyle),
+                Text(AppLocalizations.of(context)!.comp_profile_title,
+                    style: headingStyle),
                 Text(
-                  "Complete your details or continue  \nwith social media",
+                  AppLocalizations.of(context)!.comp_profile_subtitle,
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.06),
                 CompleteProfileForm(),
                 SizedBox(height: getProportionateScreenHeight(30)),
-                Text(
-                  "By continuing your confirm that you agree \nwith our Term and Condition",
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.caption,
-                ),
               ],
             ),
           ),

@@ -63,9 +63,14 @@ class _BodyFromState extends State<Body> {
               // Navigator.pushNamedAndRemoveUntil(context, SplashScreen.routeName,
               //     ModalRoute.withName(SplashScreen.routeName));
 
-              Navigator.of(context).pushAndRemoveUntil(
-                  CupertinoPageRoute(builder: (context) => SplashScreen()),
-                  (Route<dynamic> route) => false);
+              // Navigator.of(context).pushAndRemoveUntil(
+              //     CupertinoPageRoute(builder: (context) => SplashScreen()),
+              //     (Route<dynamic> route) => false);
+
+              // Navigator.popUntil(
+              //     context, ModalRoute.withName(Navigator.defaultRouteName));
+
+              Navigator.pushReplacementNamed(context, SplashScreen.routeName);
 
               // Navigator.popAndPushNamed(context, SplashScreen.routeName);
               // Navigator.pushNamedAndRemoveUntil(context, SplashScreen.routeName);

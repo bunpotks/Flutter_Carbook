@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/size_config.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'otp_form.dart';
 
 class Body extends StatelessWidget {
@@ -17,11 +17,11 @@ class Body extends StatelessWidget {
             children: [
               SizedBox(height: SizeConfig.screenHeight * 0.05),
               Text(
-                "OTP Verification",
+                AppLocalizations.of(context)!.otp_title,
                 style: headingStyle,
               ),
-              Text("We sent your code to +1 898 860 ***"),
-              buildTimer(),
+              Text(AppLocalizations.of(context)!.otp_subtitle),
+              buildTimer(context),
               OtpForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
               GestureDetector(
@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
                   // OTP code resend
                 },
                 child: Text(
-                  "Resend OTP Code",
+                  AppLocalizations.of(context)!.otp_resend,
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
               )
@@ -40,11 +40,11 @@ class Body extends StatelessWidget {
     );
   }
 
-  Row buildTimer() {
+  Row buildTimer(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("This code will expired in "),
+        Text(AppLocalizations.of(context)!.otp_subtitle2),
         TweenAnimationBuilder(
           tween: Tween(begin: 30.0, end: 0.0),
           duration: Duration(seconds: 30),

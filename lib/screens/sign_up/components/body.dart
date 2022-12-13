@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/components/socal_card.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/size_config.dart';
-
 import 'sign_up_form.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,9 +18,10 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
-                Text("Register Account", style: headingStyle),
+                Text(AppLocalizations.of(context)!.regiser_title,
+                    style: headingStyle),
                 Text(
-                  "Complete your details or continue \nwith social media",
+                  AppLocalizations.of(context)!.register_subtitle,
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
@@ -45,7 +46,7 @@ class Body extends StatelessWidget {
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
                 Text(
-                  'By continuing your confirm that you agree \nwith our Term and Condition',
+                  AppLocalizations.of(context)!.register_bottomdesc,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.caption,
                 )

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/components/default_button.dart';
+import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/size_config.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:shop_app/screens/splash/splash_screen.dart';
 
 import '../../../constants.dart';
 
@@ -108,8 +112,22 @@ class _OtpFormState extends State<OtpForm> {
           ),
           SizedBox(height: SizeConfig.screenHeight * 0.15),
           DefaultButton(
-            text: "Continue",
-            press: () {},
+            text: AppLocalizations.of(context)!.signin_continue,
+            press: () {
+              // Navigator.pushNamed(context, SplashScreen.routeName);
+              Navigator.pushNamedAndRemoveUntil(context, SignInScreen.routeName,
+                  ModalRoute.withName(SplashScreen.routeName));
+
+              // Navigator.popAndPushNamed(context, SignInScreen.routeName);
+              // Navigator.popUntil(
+              //     context,
+              //     ModalRoute.withName(
+              //       SignInScreen.routeName,
+              //     ));
+
+              // Navigator.popUntil(
+              //     context, ModalRoute.withName(SignInScreen.routeName));
+            },
           )
         ],
       ),

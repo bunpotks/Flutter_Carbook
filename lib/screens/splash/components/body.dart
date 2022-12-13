@@ -78,6 +78,7 @@ class _BodyState extends State<Body> {
                       text: AppLocalizations.of(context)!.splash_continue,
                       press: () {
                         Navigator.pushNamed(context, SignInScreen.routeName);
+                        // Navigator.pushNamed(context, '/otp');
                       },
                     ),
                     Spacer(),
