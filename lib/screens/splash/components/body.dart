@@ -10,7 +10,7 @@ import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 import 'package:shop_app/components/switch_language.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:shop_app/size_config.dart';
+// import 'package:shop_app/size_config.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -25,7 +25,7 @@ class _BodyState extends State<Body> {
     List<Map<String, String>> splashData = [
       {
         "text": AppLocalizations.of(context)!.splash_desc1,
-        "image": "assets/images/splash_intro.gif"
+        "image": "assets/images/tutorial2.gif"
       },
       {
         "text": AppLocalizations.of(context)!.splash_desc2,
@@ -33,7 +33,7 @@ class _BodyState extends State<Body> {
       },
       {
         "text": AppLocalizations.of(context)!.splash_desc3,
-        "image": "assets/images/sp_3.webp"
+        "image": "assets/images/tutorial3.gif"
       },
     ];
     return SafeArea(

@@ -1,6 +1,10 @@
 {
+    "@splash": "Splash-Screen",
     "splash_continue": "Continues",
     "splash_desc1": "Welcome to the car booking application.",
     "splash_desc2": "You can easily book a car \n in just a few clicks.",
-    "splash_desc3": "Safe service by trained drivers"
+    "splash_desc3": "Safe service by trained drivers",
+    "@signin": "Signin-Screen",
+    "signin_welcome": "Welcome Back",
+    "signin_subdesc": "Sign in with your email and password or continue with social media"
 }
