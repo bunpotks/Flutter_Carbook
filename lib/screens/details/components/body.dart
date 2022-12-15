@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/default_button.dart';
-import 'package:shop_app/models/Product.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:carbook/components/default_button.dart';
+import 'package:carbook/models/Product.dart';
+import 'package:carbook/size_config.dart';
 
 import 'color_dots.dart';
 import 'product_description.dart';

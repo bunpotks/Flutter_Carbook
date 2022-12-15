@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants.dart';
+import 'package:carbook/constants.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:carbook/screens/sign_in/sign_in_screen.dart';
+import 'package:carbook/size_config.dart';
 
 // This is the best practice
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
-import 'package:shop_app/components/switch_language.dart';
+import 'package:carbook/components/switch_language.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-// import 'package:shop_app/size_config.dart';
+// import 'package:carbook/size_config.dart';
 
 class Body extends StatefulWidget {
   @override

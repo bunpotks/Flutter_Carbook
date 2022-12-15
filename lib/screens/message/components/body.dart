@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:shop_app/screens/message/components/message_datail.dart';
+import 'package:carbook/screens/message/components/message_datail.dart';
 
 class Body extends StatelessWidget {
   final String apiUrl = "https://jsonplaceholder.typicode.com/posts";

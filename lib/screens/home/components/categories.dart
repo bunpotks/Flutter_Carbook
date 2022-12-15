@@ -1,10 +1,11 @@
+import 'package:carbook/screens/booking/booking_screen.dart';
+import 'package:carbook/screens/history/history_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop_app/screens/photoview/photoview_screen.dart';
 import '../../../size_config.dart';
-import 'package:shop_app/screens/home/components/catFlash/catgories_flash.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:shop_app/constants.dart';
+import 'package:carbook/constants.dart';
+import 'package:carbook/screens/passenger_profile/passengerprofille_screen.dart';
+import 'package:carbook/screens/coupon/coupon_screen.dart';
 
 class Categories extends StatelessWidget {
   @override
@@ -13,14 +14,25 @@ class Categories extends StatelessWidget {
       {
         "icon": "assets/icons/user-svgrepo-com.svg",
         "text": "ประวัติผู้โดยสาร",
+        "press": () =>
+            Navigator.pushNamed(context, PassengerProfileScreen.routeName),
       },
-      {"icon": "assets/icons/clipboard-svgrepo-com.svg", "text": "รายการจอง"},
-      {"icon": "assets/icons/coupon-svgrepo-com.svg", "text": "คูปอง"},
+      {
+        "icon": "assets/icons/clipboard-svgrepo-com.svg",
+        "text": "รายการจอง",
+        "press": () => Navigator.pushNamed(context, BookingScreen.routeName),
+      },
+      {
+        "icon": "assets/icons/coupon-svgrepo-com.svg",
+        "text": "คูปอง",
+        "press": () => Navigator.pushNamed(context, CouponScreen.routeName),
+      },
       {
         "icon": "assets/icons/history-svgrepo-com.svg",
-        "text": "ประวัติการเดินทาง"
+        "text": "ประวัติ",
+        "press": () => Navigator.pushNamed(context, HistoryScreen.routeName),
       },
-      {"icon": "assets/icons/Bill.svg", "text": "ประวัติชำระเงิน"},
+      // {"icon": "assets/icons/Bill.svg", "text": "ประวัติชำระเงิน"},
     ];
     return Padding(
       padding: EdgeInsets.all(getProportionateScreenWidth(0)),
@@ -36,16 +48,9 @@ class Categories extends StatelessWidget {
               children: List.generate(
                 categories.length,
                 (index) => CategoryCard(
-                  icon: categories[index]["icon"],
-                  text: categories[index]["text"],
-                  press: () {
-                    switch (categories[index]['text']) {
-                      case 'Notification':
-                        break;
-                      default:
-                    }
-                  },
-                ),
+                    icon: categories[index]["icon"],
+                    text: categories[index]["text"],
+                    press: categories[index]["press"]),
               ),
             ),
             SizedBox(width: getProportionateScreenWidth(20))

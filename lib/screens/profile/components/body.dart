@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:shop_app/screens/splash/splash_screen.dart';
-import 'package:shop_app/screens/home/home_screen.dart';
+import 'package:carbook/screens/splash/splash_screen.dart';
+import 'package:carbook/screens/home/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'profile_menu.dart';

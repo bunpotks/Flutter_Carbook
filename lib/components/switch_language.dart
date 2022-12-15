@@ -1,6 +1,6 @@
-import 'package:shop_app/main.dart';
+import 'package:carbook/main.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:carbook/size_config.dart';
 
 class SwitchLang extends StatelessWidget {
   const SwitchLang({super.key});

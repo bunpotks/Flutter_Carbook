@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/routes.dart';
+import 'package:carbook/routes.dart';
 import 'package:flutter/services.dart';
-import 'package:shop_app/screens/home/home_screen.dart';
-import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
-import 'package:shop_app/screens/splash/splash_screen.dart';
-import 'package:shop_app/theme.dart';
+import 'package:carbook/screens/home/home_screen.dart';
+import 'package:carbook/screens/sign_in/sign_in_screen.dart';
+import 'package:carbook/screens/splash/splash_screen.dart';
+import 'package:carbook/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
+import 'package:carbook/screens/complete_profile/complete_profile_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // import 'size_config.dart'
 

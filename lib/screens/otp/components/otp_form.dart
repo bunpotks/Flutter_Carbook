@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/default_button.dart';
-import 'package:shop_app/screens/home/home_screen.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:carbook/components/default_button.dart';
+import 'package:carbook/screens/home/home_screen.dart';
+import 'package:carbook/size_config.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
-import 'package:shop_app/screens/splash/splash_screen.dart';
+import 'package:carbook/screens/sign_in/sign_in_screen.dart';
+import 'package:carbook/screens/splash/splash_screen.dart';
 
 import '../../../constants.dart';
 

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/no_account_text.dart';
-import 'package:shop_app/components/socal_card.dart';
+import 'package:carbook/components/no_account_text.dart';
+import 'package:carbook/components/socal_card.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:shop_app/components/switch_language.dart';
+import 'package:carbook/components/switch_language.dart';
 
 class Body extends StatelessWidget {
   @override

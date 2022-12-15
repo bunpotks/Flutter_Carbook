@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/socal_card.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:carbook/components/socal_card.dart';
+import 'package:carbook/constants.dart';
+import 'package:carbook/size_config.dart';
 import 'sign_up_form.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

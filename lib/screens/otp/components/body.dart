@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:carbook/constants.dart';
+import 'package:carbook/size_config.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'otp_form.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/screens/home/components/catFlash/catgories_flash.dart';
-import 'package:shop_app/screens/blank/blank_screen.dart';
+import 'package:carbook/screens/home/components/catFlash/catgories_flash.dart';
+import 'package:carbook/screens/blank/blank_screen.dart';
 import '../../../size_config.dart';
 import 'section_title.dart';
 import 'package:page_transition/page_transition.dart';

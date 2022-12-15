@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:carbook/size_config.dart';
 
 const kPrimaryColor = Colors.blue;
 const kPrimaryLightColor = Color(0xFFFFECDF);

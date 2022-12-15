@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
-import 'package:shop_app/size_config.dart';
-import 'package:shop_app/screens/details/components/custom_app_bar.dart';
+import 'package:carbook/size_config.dart';
+import 'package:carbook/screens/details/components/custom_app_bar.dart';
 
 class PhotoViewArguments {
   final String img;

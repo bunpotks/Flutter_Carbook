@@ -5,12 +5,13 @@ import 'constants.dart';
 ThemeData theme() {
   return ThemeData(
       primarySwatch: Colors.blue,
+      // brightness: Brightness.light,
       scaffoldBackgroundColor: Colors.white,
       fontFamily: "Ibm",
       appBarTheme: appBarTheme(),
       textTheme: textTheme(),
       inputDecorationTheme: inputDecorationTheme(),
-      // visualDensity: VisualDensity.adaptivePlatformDensity,
+      visualDensity: VisualDensity.adaptivePlatformDensity,
       pageTransitionsTheme: PageTransitionsTheme(
         builders: {
           TargetPlatform.android: CupertinoPageTransitionsBuilder(),
@@ -46,12 +47,9 @@ TextTheme textTheme() {
 
 AppBarTheme appBarTheme() {
   return AppBarTheme(
-    color: Colors.white,
-    elevation: 0,
-    // brightness: Brightness.light,
-    iconTheme: IconThemeData(color: Colors.black),
-    // textTheme: TextTheme(
-    //   headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
-    // ),
-  );
+      color: Colors.white,
+      elevation: 0,
+      iconTheme: IconThemeData(color: Colors.black),
+      foregroundColor: Colors.black,
+      centerTitle: true);
 }
