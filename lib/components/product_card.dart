@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:carbook/models/Product.dart';
 import 'package:carbook/screens/details/details_screen.dart';
-import 'package:page_transition/page_transition.dart';
 
 import '../constants.dart';
 import '../size_config.dart';

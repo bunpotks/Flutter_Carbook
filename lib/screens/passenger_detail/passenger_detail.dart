@@ -12,7 +12,8 @@ class PassengerDetail extends StatelessWidget {
     // print(agrs);
     return Scaffold(
       appBar: AppBar(
-        title: Text(agrs.passenger.name.first + ' ' + agrs.passenger.name.last),
+        title: Text(
+            agrs.passenger.name!.first! + ' ' + agrs.passenger.name!.last!),
       ),
       body: Body(passenger: agrs.passenger),
     );

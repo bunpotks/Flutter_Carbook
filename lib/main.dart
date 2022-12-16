@@ -7,7 +7,6 @@ import 'package:carbook/screens/splash/splash_screen.dart';
 import 'package:carbook/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:carbook/screens/complete_profile/complete_profile_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // import 'size_config.dart'
 

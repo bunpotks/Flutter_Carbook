@@ -18,34 +18,27 @@ class SpecialOffers extends StatelessWidget {
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SectionTitle(
-            title: "Coupon Discount",
+            title: "Booking",
             press: () {},
           ),
         ),
-        SizedBox(height: getProportionateScreenWidth(20)),
+        SizedBox(height: getProportionateScreenWidth(10)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
               SpecialOfferCard(
-                  image: "assets/images/Image Banner 2.png",
-                  category: "Smartphone",
-                  numOfBrands: 18,
+                  image: "assets/images/taxi3.jpeg",
+                  category: "One Route Trip",
+                  desc: "travel to a single destination",
                   press: () {
                     Navigator.pushNamed(context, '/blank');
                   }),
               SpecialOfferCard(
-                  image: "assets/images/Image Banner 3.png",
-                  category: "Fashion",
-                  numOfBrands: 24,
-                  press: () {
-                    Navigator.pushNamed(
-                        context, CatgoriesFlashScreen.routeName);
-                  }),
-              SpecialOfferCard(
-                  image: "assets/images/sport.jpeg",
-                  category: "Sport",
-                  numOfBrands: 12,
+                  image: "assets/images/taxi2.webp",
+                  category: "Round Trip",
+                  desc:
+                      "Travel to the destination and return to the same point.",
                   press: () {
                     Navigator.pushNamed(
                         context, CatgoriesFlashScreen.routeName);
@@ -64,12 +57,11 @@ class SpecialOfferCard extends StatelessWidget {
     Key? key,
     required this.category,
     required this.image,
-    required this.numOfBrands,
+    required this.desc,
     required this.press,
   }) : super(key: key);
 
-  final String category, image;
-  final int numOfBrands;
+  final String category, image, desc;
   final GestureTapCallback press;
 
   @override
@@ -79,16 +71,16 @@ class SpecialOfferCard extends StatelessWidget {
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
-          width: getProportionateScreenWidth(242),
-          height: getProportionateScreenWidth(100),
+          width: getProportionateScreenWidth(260),
+          height: getProportionateScreenWidth(130),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(15),
             child: Stack(
               children: [
                 Image.asset(
                   image,
                   fit: BoxFit.cover,
-                  width: getProportionateScreenWidth(242),
+                  width: getProportionateScreenWidth(260),
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -96,8 +88,8 @@ class SpecialOfferCard extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Color(0xFF343434).withOpacity(0.4),
-                        Color(0xFF343434).withOpacity(0.15),
+                        Color(0xFF343434).withOpacity(0.2),
+                        Color(0xFF343434).withOpacity(0.1),
                       ],
                     ),
                   ),
@@ -118,7 +110,7 @@ class SpecialOfferCard extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        TextSpan(text: "$numOfBrands Brands")
+                        TextSpan(text: "$desc")
                       ],
                     ),
                   ),

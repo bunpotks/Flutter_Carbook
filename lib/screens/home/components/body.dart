@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
 import 'categories.dart';
-import 'discount_banner.dart';
+import 'promotion_banner.dart';
 import 'home_header.dart';
 import 'popular_product.dart';
 import 'special_offers.dart';
+import 'promotion.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -14,24 +15,41 @@ class Body extends StatelessWidget {
         onTap: () {
           FocusManager.instance.primaryFocus?.unfocus();
         },
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: getProportionateScreenHeight(20)),
-                HomeHeader(),
-                SizedBox(height: getProportionateScreenWidth(10)),
-                DiscountBanner(),
-                SizedBox(height: getProportionateScreenWidth(10)),
-                Categories(),
-                SizedBox(height: getProportionateScreenWidth(30)),
-                SpecialOffers(),
-                SizedBox(height: getProportionateScreenWidth(30)),
-                PopularProducts(),
-                SizedBox(height: getProportionateScreenWidth(30)),
-              ],
+        child: Stack(
+          children: [
+            Container(
+              height: 300,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.blue.withOpacity(0.3),
+                    Colors.blue.withOpacity(0.0),
+                  ],
+                ),
+              ),
             ),
-          ),
+            SafeArea(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(height: getProportionateScreenHeight(30)),
+                    HomeHeader(),
+                    SizedBox(height: getProportionateScreenWidth(30)),
+                    SpecialOffers(),
+                    SizedBox(height: getProportionateScreenHeight(30)),
+                    Categories(),
+                    SizedBox(height: getProportionateScreenHeight(20)),
+                    Promotion(),
+                    SizedBox(height: getProportionateScreenWidth(30)),
+                    PopularProducts(),
+                    SizedBox(height: getProportionateScreenWidth(30)),
+                  ],
+                ),
+              ),
+            )
+          ],
         ));
   }
 }

@@ -39,8 +39,9 @@ dependencies:
   photo_view: ^0.14.0
   flutter_localizations: # Add this line
     sdk: flutter 
-  intl: ^0.17.0         # Add this line
-  
+  intl: ^0.17.0    
+  shimmer: ^2.0.0     # Add this line
+  carousel_slider: ^4.2.1
 
 
 dev_dependencies:

@@ -32,7 +32,11 @@ class Categories extends StatelessWidget {
         "text": "ประวัติ",
         "press": () => Navigator.pushNamed(context, HistoryScreen.routeName),
       },
-      // {"icon": "assets/icons/Bill.svg", "text": "ประวัติชำระเงิน"},
+      {
+        "icon": "assets/icons/Bill.svg",
+        "text": "การชำระเงิน",
+        "press": () => Navigator.pushNamed(context, HistoryScreen.routeName)
+      },
     ];
     return Padding(
       padding: EdgeInsets.all(getProportionateScreenWidth(0)),

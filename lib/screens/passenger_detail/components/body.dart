@@ -10,38 +10,28 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Column(
-        children: [
-          Container(
-            alignment: Alignment.topCenter,
-            child: SizedBox(
-              width: getProportionateScreenWidth(200),
-              height: getProportionateScreenHeight(200),
-              child: Hero(
-                  tag: passenger.email,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Container(
-                      alignment: Alignment.center,
-                      constraints: const BoxConstraints(
-                        maxWidth: 200,
-                        maxHeight: 200,
-                      ),
-                      color: Theme.of(context).primaryColor,
-                      child: Image.network(
-                        passenger.picture.large,
-                        fit: BoxFit.cover,
-                        width: getProportionateScreenHeight(200),
-                        height: getProportionateScreenHeight(200),
-                      ),
-                    ),
-                  )),
-            ),
-          ),
-        ],
-      ),
+    return SingleChildScrollView(
+      child: Column(children: [
+        PassengerPicture(context),
+        SizedBox(height: getProportionateScreenHeight(20)),
+      ]),
     );
+  }
+
+  Container PassengerPicture(BuildContext context) {
+    return Container(
+        alignment: Alignment.center,
+        child: Hero(
+          tag: passenger.email!,
+          child: Container(
+              width: MediaQuery.of(context).size.width * 1,
+              height: MediaQuery.of(context).size.height * 0.5,
+              decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  // borderRadius: BorderRadius.circular(100),
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(passenger.picture!.large!)))),
+        ));
   }
 }

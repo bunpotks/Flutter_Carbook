@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:carbook/screens/photoview/photoview_screen.dart';
-import 'package:page_transition/page_transition.dart';
 
 import '../../../size_config.dart';
 

@@ -19,6 +19,10 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
   void initState() {
     super.initState();
 
+    Future.delayed(const Duration(milliseconds: 3200), () {
+      Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+    });
+
     _controller = AnimationController(vsync: this)
       // ..repeat(
       //   min: 1.0,
@@ -78,15 +82,15 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
             ),
           ),
           Spacer(),
-          SizedBox(
-            width: SizeConfig.screenWidth * 0.9,
-            child: DefaultButton(
-              text: "Go to Menu",
-              press: () {
-                Navigator.pushReplacementNamed(context, HomeScreen.routeName);
-              },
-            ),
-          ),
+          // SizedBox(
+          //   width: SizeConfig.screenWidth * 0.9,
+          //   child: DefaultButton(
+          //     text: "Go to Menu",
+          //     press: () {
+          //       Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+          //     },
+          //   ),
+          // ),
           Spacer(),
         ],
       ),
