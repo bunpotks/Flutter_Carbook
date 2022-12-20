@@ -20,15 +20,15 @@ class Body extends StatelessWidget {
             Container(
               height: 300,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.blue.withOpacity(0.3),
-                    Colors.blue.withOpacity(0.0),
-                  ],
-                ),
-              ),
+                  // gradient: LinearGradient(
+                  //   begin: Alignment.topCenter,
+                  //   end: Alignment.bottomCenter,
+                  //   colors: [
+                  //     Colors.lightBlue.withOpacity(0.45),
+                  //     Colors.blue.withOpacity(0.0),
+                  //   ],
+                  // ),
+                  ),
             ),
             SafeArea(
               child: SingleChildScrollView(
