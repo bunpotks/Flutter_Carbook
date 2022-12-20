@@ -1,7 +1,5 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:carbook/routes.dart';
@@ -9,7 +7,7 @@ import 'package:flutter/foundation.dart';
 
 import 'package:flutter/services.dart';
 import 'package:carbook/screens/home/home_screen.dart';
-import 'package:carbook/screens/sign_in/sign_in_screen.dart';
+// import 'package:carbook/screens/sign_in/sign_in_screen.dart';
 import 'package:carbook/screens/splash/splash_screen.dart';
 import 'package:carbook/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,8 +20,6 @@ int id = 0;
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
 
-/// Streams are created so that app can respond to notification-related events
-/// since the plugin is initialised in the `main` function
 final StreamController<ReceivedNotification> didReceiveLocalNotificationStream =
     StreamController<ReceivedNotification>.broadcast();
 
@@ -76,25 +72,17 @@ void notificationTapBackground(NotificationResponse notificationResponse) {
   }
 }
 
-/// IMPORTANT: running the following code on its own won't work as there is
-/// setup required for each platform head project.
-///
-/// Please download the complete example app from the GitHub repository where
-/// all the setup has been done
-
-// Future<void> _configureLocalTimeZone() async {
-//   if (kIsWeb || Platform.isLinux) {
-//     return;
-//   }
-//   tz.initializeTimeZones();
-//   final String? timeZoneName = await FlutterTimezone.getLocalTimezone();
-//   tz.setLocalLocation(tz.getLocation(timeZoneName!));
-// }
-
 bool? is_Login;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // transparent status bar
+  ));
+
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  is_Login = await prefs.getBool('is_logged_in') != null ? true : false;
+  runApp(MyApp(isLogin: is_Login));
 
   final NotificationAppLaunchDetails? notificationAppLaunchDetails = !kIsWeb &&
           Platform.isLinux
@@ -205,14 +193,6 @@ void main() async {
   );
 
   // await _configureLocalTimeZone();
-
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // transparent status bar
-  ));
-
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  is_Login = await prefs.getBool('is_logged_in') != null ? true : false;
-  runApp(MyApp(isLogin: is_Login));
 }
 
 class MyApp extends StatefulWidget {
