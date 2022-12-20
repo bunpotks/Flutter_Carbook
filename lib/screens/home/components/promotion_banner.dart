@@ -60,7 +60,9 @@ class PromotionBaner extends StatelessWidget {
       margin: EdgeInsets.only(top: getProportionateScreenWidth(10)),
       child: CarouselSlider(
         options: CarouselOptions(
-            height: 160.0,
+            height: MediaQuery.of(context).size.width > 900
+                ? MediaQuery.of(context).size.height * 0.26
+                : MediaQuery.of(context).size.height * 0.23,
             autoPlay: true,
             autoPlayAnimationDuration: Duration(milliseconds: 1500),
             autoPlayInterval: Duration(seconds: 5)),
