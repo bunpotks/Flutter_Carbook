@@ -9,6 +9,8 @@
     "signin_subdesc": "Sign in with your email and password or continue with social media",
     "signin_input_email": "Email",
     "signin_input_email_placeholder": "Enter your email",
+    "signin_input_date": "Date",
+    "signin_input_date_placeholder": "Enter your date",
     "signin_input_password": "Password",
     "signin_input_password_placeholder": "Enter your password",
     "signin_input_password_confirm": "Confirm Password",
