@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:carbook/main.dart';
-import 'package:carbook/screens/blank/blank_screen.dart';
 import 'package:carbook/service/notification_service.dart';
+// import 'package:bookin'
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -25,10 +24,11 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
+    print('1');
     _isAndroidPermissionGranted();
     _requestPermissions();
-    _configureDidReceiveLocalNotificationSubject();
-    _configureSelectNotificationSubject();
+    // _configureDidReceiveLocalNotificationSubject();
+    // _configureSelectNotificationSubject();
   }
 
   Future<void> _isAndroidPermissionGranted() async {
@@ -75,40 +75,47 @@ class _BodyState extends State<Body> {
     }
   }
 
-  void _configureDidReceiveLocalNotificationSubject() {
-    didReceiveLocalNotificationStream.stream
-        .listen((ReceivedNotification receivedNotification) async {
-      await showDialog(
-        context: context,
-        builder: (BuildContext context) => CupertinoAlertDialog(
-          title: receivedNotification.title != null
-              ? Text(receivedNotification.title!)
-              : null,
-          content: receivedNotification.body != null
-              ? Text(receivedNotification.body!)
-              : null,
-          actions: <Widget>[
-            CupertinoDialogAction(
-              isDefaultAction: true,
-              onPressed: () async {
-                Navigator.of(context, rootNavigator: true).pop();
-                await Navigator.pushNamed(context, BlankScreen.routeName);
-              },
-              child: const Text('Ok'),
-            )
-          ],
-        ),
-      );
-    });
-  }
+  // Future<void> _configureDidReceiveLocalNotificationSubject() async {
+  //   didReceiveLocalNotificationStream.stream
+  //       .listen((ReceivedNotification receivedNotification) async {
+  //     await showDialog(
+  //       context: context,
+  //       builder: (BuildContext context) => CupertinoAlertDialog(
+  //         title: receivedNotification.title != null
+  //             ? Text(receivedNotification.title!)
+  //             : null,
+  //         content: receivedNotification.body != null
+  //             ? Text(receivedNotification.body!)
+  //             : null,
+  //         actions: <Widget>[
+  //           CupertinoDialogAction(
+  //             isDefaultAction: true,
+  //             onPressed: () async {
+  //               Navigator.of(context, rootNavigator: true).pop();
+  //               await Navigator.pushNamed(context, BlankScreen.routeName);
+  //             },
+  //             child: const Text('Ok'),
+  //           )
+  //         ],
+  //       ),
+  //     );
+  //   });
+  // }
 
-  void _configureSelectNotificationSubject() {
-    selectNotificationStream.stream.listen((String? payload) async {
-      print('pres');
-      await Navigator.of(context).push(MaterialPageRoute<void>(
-        builder: (BuildContext context) => BlankScreen(),
-      ));
-    });
+  // void _configureSelectNotificationSubject() {
+  //   selectNotificationStream.stream.listen((String? payload) async {
+  //     await Navigator.of(context).push(MaterialPageRoute<void>(
+  //       builder: (BuildContext context) => PayloadScreen(payload),
+  //     ));
+  //   });
+  // }
+
+  @override
+  void dispose() {
+    super.dispose();
+
+    didReceiveLocalNotificationStream.close();
+    selectNotificationStream.close();
   }
 
   @override
@@ -118,8 +125,8 @@ class _BodyState extends State<Body> {
       children: [
         ElevatedButton(
             child: Text('BasicNotification'),
-            onPressed: () async {
-              await notification.showNotification();
+            onPressed: () {
+              notification.showNotification();
             }),
         ElevatedButton(
             child: Text('Repeat'),

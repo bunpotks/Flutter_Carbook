@@ -48,12 +48,7 @@ class BlankScreen extends StatelessWidget {
                           CupertinoPageRoute(
                               builder: (context) => CupertinoSharePage()),
                         )
-                      }
-
-                  //  Navigator.of(context).push(
-                  //     MaterialWithModalsPageRoute(
-                  //         builder: (context) => CupertinoSharePage()))
-                  ),
+                      }),
               ListTile(
                 title: Text('Material fit'),
                 onTap: () => showMaterialModalBottomSheet(

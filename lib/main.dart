@@ -82,7 +82,6 @@ void main() async {
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   is_Login = await prefs.getBool('is_logged_in') != null ? true : false;
-  runApp(MyApp(isLogin: is_Login));
 
   final NotificationAppLaunchDetails? notificationAppLaunchDetails = !kIsWeb &&
           Platform.isLinux
@@ -178,19 +177,21 @@ void main() async {
     initializationSettings,
     onDidReceiveNotificationResponse:
         (NotificationResponse notificationResponse) {
+      print(notificationResponse.notificationResponseType);
       switch (notificationResponse.notificationResponseType) {
         case NotificationResponseType.selectedNotification:
-          selectNotificationStream.add(notificationResponse.payload);
+          // selectNotificationStream.add(notificationResponse.payload);
           break;
         case NotificationResponseType.selectedNotificationAction:
           if (notificationResponse.actionId == navigationActionId) {
-            selectNotificationStream.add(notificationResponse.payload);
+            // selectNotificationStream.add(notificationResponse.payload);
           }
           break;
       }
     },
     onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
   );
+  runApp(MyApp(isLogin: is_Login));
 
   // await _configureLocalTimeZone();
 }
