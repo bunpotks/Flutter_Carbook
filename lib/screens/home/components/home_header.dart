@@ -40,10 +40,10 @@ class HomeHeader extends StatelessWidget {
                 ],
               ),
             ),
-            IconBtnWithCounter(
-              svgSrc: "assets/icons/Cart Icon.svg",
-              press: () => {Navigator.pushNamed(context, CartScreen.routeName)},
-            ),
+            // IconBtnWithCounter(
+            //   svgSrc: "assets/icons/Cart Icon.svg",
+            //   press: () => {Navigator.pushNamed(context, CartScreen.routeName)},
+            // ),
             // IconBtnWithCounter(
             //   press: () => Navigator.pushNamed(context, CartScreen.routeName),
             //   svgSrc: "assets/icons/Bell.svg",

@@ -15,7 +15,7 @@ class SumaryScreen extends StatelessWidget {
         title: Text(title),
       ),
       body: Body(),
-      // bottomNavigationBar: Bottom(),
+      bottomNavigationBar: PaymentDetail(),
     );
   }
 }

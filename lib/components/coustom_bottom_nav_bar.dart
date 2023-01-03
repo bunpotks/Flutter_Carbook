@@ -59,40 +59,40 @@ class CustomBottomNavBar extends StatelessWidget {
                   )
                 },
               ),
-              IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg",
-                    color: MenuState.favourite == selectedMenu
-                        ? kPrimaryColor
-                        : inActiveIconColor),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation1, animation2) =>
-                          FavoriteScreen(),
-                      transitionDuration: Duration.zero,
-                      reverseTransitionDuration: Duration.zero,
-                    ),
-                  );
-                },
-              ),
-              IconButton(
-                icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg",
-                    color: MenuState.message == selectedMenu
-                        ? kPrimaryColor
-                        : inActiveIconColor),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation1, animation2) =>
-                          MessageScreen(),
-                      transitionDuration: Duration.zero,
-                      reverseTransitionDuration: Duration.zero,
-                    ),
-                  );
-                },
-              ),
+              // IconButton(
+              //   icon: SvgPicture.asset("assets/icons/Heart Icon.svg",
+              //       color: MenuState.favourite == selectedMenu
+              //           ? kPrimaryColor
+              //           : inActiveIconColor),
+              //   onPressed: () {
+              //     Navigator.pushReplacement(
+              //       context,
+              //       PageRouteBuilder(
+              //         pageBuilder: (context, animation1, animation2) =>
+              //             FavoriteScreen(),
+              //         transitionDuration: Duration.zero,
+              //         reverseTransitionDuration: Duration.zero,
+              //       ),
+              //     );
+              //   },
+              // ),
+              // IconButton(
+              //   icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg",
+              //       color: MenuState.message == selectedMenu
+              //           ? kPrimaryColor
+              //           : inActiveIconColor),
+              //   onPressed: () {
+              //     Navigator.pushReplacement(
+              //       context,
+              //       PageRouteBuilder(
+              //         pageBuilder: (context, animation1, animation2) =>
+              //             MessageScreen(),
+              //         transitionDuration: Duration.zero,
+              //         reverseTransitionDuration: Duration.zero,
+              //       ),
+              //     );
+              //   },
+              // ),
               IconButton(
                   icon: SvgPicture.asset(
                     "assets/icons/User Icon.svg",
