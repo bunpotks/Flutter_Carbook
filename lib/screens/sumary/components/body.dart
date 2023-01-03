@@ -191,10 +191,16 @@ class PaymentDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: Container(
-            height: 210,
-            child: SafeArea(top: true, child: PaymentDetails(context))));
+    return Container(
+        height: 210,
+        decoration: BoxDecoration(color: Colors.white, boxShadow: [
+          BoxShadow(
+            offset: Offset(0, -10),
+            blurRadius: 20,
+            color: Color(0xFFDADADA).withOpacity(0.3),
+          ),
+        ]),
+        child: SafeArea(top: true, child: PaymentDetails(context)));
   }
 
   Widget PaymentDetails(context) {
