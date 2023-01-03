@@ -19,16 +19,7 @@ class Body extends StatelessWidget {
           children: [
             Container(
               height: 300,
-              decoration: BoxDecoration(
-                  // gradient: LinearGradient(
-                  //   begin: Alignment.topCenter,
-                  //   end: Alignment.bottomCenter,
-                  //   colors: [
-                  //     Colors.lightBlue.withOpacity(0.45),
-                  //     Colors.blue.withOpacity(0.0),
-                  //   ],
-                  // ),
-                  ),
+              decoration: BoxDecoration(),
             ),
             SafeArea(
               child: SingleChildScrollView(
@@ -42,6 +33,8 @@ class Body extends StatelessWidget {
                     Categories(),
                     SizedBox(height: getProportionateScreenHeight(20)),
                     Promotion(),
+                    // SizedBox(height: getProportionateScreenWidth(30)),
+                    // Promotion(),
                     SizedBox(height: getProportionateScreenWidth(30)),
                     // PopularProducts(),
                     // SizedBox(height: getProportionateScreenWidth(30)),

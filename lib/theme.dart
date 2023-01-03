@@ -5,7 +5,7 @@ import 'constants.dart';
 ThemeData theme() {
   return ThemeData(
       primarySwatch: Colors.blue,
-      // brightness: Brightness.light,
+      // brightness: Brightness.dark,
       scaffoldBackgroundColor: Colors.white,
       fontFamily: "Ibm",
       appBarTheme: appBarTheme(),

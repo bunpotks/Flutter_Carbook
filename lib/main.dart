@@ -7,13 +7,14 @@ import 'package:flutter/foundation.dart';
 
 import 'package:flutter/services.dart';
 import 'package:carbook/screens/home/home_screen.dart';
-// import 'package:carbook/screens/sign_in/sign_in_screen.dart';
 import 'package:carbook/screens/splash/splash_screen.dart';
 import 'package:carbook/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:google_maps_flutter_android/google_maps_flutter_android.dart';
+import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 
 int id = 0;
 
@@ -79,6 +80,12 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent, // transparent status bar
   ));
+
+  final GoogleMapsFlutterPlatform mapsImplementation =
+      GoogleMapsFlutterPlatform.instance;
+  if (mapsImplementation is GoogleMapsFlutterAndroid) {
+    mapsImplementation.useAndroidViewSurface = true;
+  }
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   is_Login = await prefs.getBool('is_logged_in') != null ? true : false;

@@ -15,23 +15,42 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:
-          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SearchField(),
-          // IconBtnWithCounter(
-          //   svgSrc: "assets/icons/Cart Icon.svg",
-          //   press: () => {Navigator.pushNamed(context, CartScreen.routeName)},
-          // ),
-          IconBtnWithCounter(
-            press: () => Navigator.pushNamed(context, CartScreen.routeName),
-            svgSrc: "assets/icons/Bell.svg",
-            numOfitem: 2,
-          ),
-        ],
+    return Container(
+      // decoration: BoxDecoration(color: Colors.amber),
+      child: Padding(
+        padding:
+            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // SearchField(),
+            Container(
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/user.jpeg"),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text(
+                      'Christopher Nolan',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            IconBtnWithCounter(
+              svgSrc: "assets/icons/Cart Icon.svg",
+              press: () => {Navigator.pushNamed(context, CartScreen.routeName)},
+            ),
+            // IconBtnWithCounter(
+            //   press: () => Navigator.pushNamed(context, CartScreen.routeName),
+            //   svgSrc: "assets/icons/Bell.svg",
+            //   numOfitem: 2,
+            // ),
+          ],
+        ),
       ),
     );
   }

@@ -57,7 +57,7 @@ class Body extends StatelessWidget {
                     return Text(snapshot.data[index].gender);
                     // return Text(snapshot.data[index].toString());
                   });
-              ;
+
               // return ListView.builder(
               //     padding: EdgeInsets.all(8),
               //     itemCount: snapshot.data.length,

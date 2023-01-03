@@ -114,19 +114,8 @@ class _OtpFormState extends State<OtpForm> {
           DefaultButton(
             text: AppLocalizations.of(context)!.signin_continue,
             press: () {
-              // Navigator.pushNamed(context, SplashScreen.routeName);
               Navigator.pushNamedAndRemoveUntil(context, SignInScreen.routeName,
                   ModalRoute.withName(SplashScreen.routeName));
-
-              // Navigator.popAndPushNamed(context, SignInScreen.routeName);
-              // Navigator.popUntil(
-              //     context,
-              //     ModalRoute.withName(
-              //       SignInScreen.routeName,
-              //     ));
-
-              // Navigator.popUntil(
-              //     context, ModalRoute.withName(SignInScreen.routeName));
             },
           )
         ],

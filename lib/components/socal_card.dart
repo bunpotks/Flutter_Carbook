@@ -4,14 +4,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../size_config.dart';
 
 class SocalCard extends StatelessWidget {
+  final String? icon;
+  final Function? press;
+
   const SocalCard({
     Key? key,
     this.icon,
     this.press,
   }) : super(key: key);
-
-  final String? icon;
-  final Function? press;
 
   @override
   Widget build(BuildContext context) {

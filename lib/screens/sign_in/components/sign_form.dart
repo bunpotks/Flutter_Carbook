@@ -125,6 +125,7 @@ class _SignFormState extends State<SignForm> {
 
   InkWell buildDateFormField() {
     return InkWell(
+      borderRadius: BorderRadius.circular(10),
       onTap: () => {},
       child: TextFormField(
         controller: date,

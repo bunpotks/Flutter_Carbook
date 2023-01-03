@@ -1,3 +1,4 @@
+import 'package:carbook/screens/blank/blank_screen.dart';
 import 'package:carbook/screens/booking/booking_screen.dart';
 import 'package:carbook/screens/history/history_screen.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class Categories extends StatelessWidget {
       {
         "icon": "assets/icons/history-svgrepo-com.svg",
         "text": "ประวัติ",
-        "press": () => Navigator.pushNamed(context, HistoryScreen.routeName),
+        "press": () => Navigator.pushNamed(context, BlankScreen.routeName),
       },
       {
         "icon": "assets/icons/Bill.svg",

@@ -1,3 +1,4 @@
+import 'package:carbook/screens/book_trip/booktrip_1.dart';
 import 'package:flutter/material.dart';
 import 'package:carbook/screens/home/components/catFlash/catgories_flash.dart';
 import 'package:carbook/screens/blank/blank_screen.dart';
@@ -27,22 +28,43 @@ class SpecialOffers extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              SpecialOfferCard(
-                  image: "assets/images/taxi3.jpeg",
-                  category: "One Route Trip",
-                  desc: "travel to a single destination",
-                  press: () {
-                    Navigator.pushNamed(context, '/blank');
-                  }),
-              SpecialOfferCard(
-                  image: "assets/images/taxi2.webp",
-                  category: "Round Trip",
-                  desc:
-                      "Travel to the destination and return to the same point.",
-                  press: () {
-                    Navigator.pushNamed(
-                        context, CatgoriesFlashScreen.routeName);
-                  }),
+              Hero(
+                tag: "OneWay",
+                child: SpecialOfferCard(
+                    image: "assets/images/taxi3.jpeg",
+                    category: "One Way Trip",
+                    desc: "travel to a single destination",
+                    press: () {
+                      Navigator.pushNamed(context, BookTrip1Screen.routeName,
+                          arguments: {
+                            "tag": "OneWay",
+                            "image": "assets/images/one_way.webp",
+                            "category": "One Way Trip",
+                            "desc": "travel to a single destination",
+                          });
+                    }),
+              ),
+              Hero(
+                tag: "RoundTrip",
+                child: SpecialOfferCard(
+                    image: "assets/images/taxi2.webp",
+                    category: "Round Trip",
+                    desc:
+                        "Travel to the destination and return to the same point.",
+                    press: () {
+                      Navigator.pushNamed(context, BookTrip1Screen.routeName,
+                          arguments: {
+                            "tag": "RoundTrip",
+                            "image": "assets/images/two_way.webp",
+                            "category": "Round Trip",
+                            "desc":
+                                "Travel to the destination and return to the same point.",
+                          });
+
+                      // Navigator.pushNamed(
+                      //     context, CatgoriesFlashScreen.routeName);
+                    }),
+              ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),
