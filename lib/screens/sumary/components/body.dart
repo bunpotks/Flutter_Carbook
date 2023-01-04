@@ -26,6 +26,7 @@ class Body extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
+              RemarkField(),
               SizedBox(
                 height: 30,
               ),
@@ -43,7 +44,7 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.all(0.0),
         child: Container(
           decoration: BoxDecoration(
-              color: kSecondaryColor.withOpacity(0.2),
+              color: kSecondaryColor.withOpacity(0.15),
               borderRadius: BorderRadius.circular(10)),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -184,6 +185,20 @@ class Body extends StatelessWidget {
       ]),
     );
   }
+
+  Widget RemarkField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        labelText: 'หมายเหตุ',
+        hintText: 'ระบุหมายเหตุเพื่อบอกให้คนขับรถทราบ',
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        suffixIcon: Icon(
+          Icons.textsms_outlined,
+          color: Colors.grey,
+        ),
+      ),
+    );
+  }
 }
 
 class PaymentDetail extends StatelessWidget {
@@ -192,7 +207,7 @@ class PaymentDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 210,
+        height: 200,
         decoration: BoxDecoration(color: Colors.white, boxShadow: [
           BoxShadow(
             offset: Offset(0, -10),
@@ -203,9 +218,14 @@ class PaymentDetail extends StatelessWidget {
         child: SafeArea(top: true, child: PaymentDetails(context)));
   }
 
+  Future<void> _confirmSumary(context) async {
+    Navigator.pushNamedAndRemoveUntil(
+        context, SummarySuccess.routeName, ((Route<dynamic> route) => false));
+  }
+
   Widget PaymentDetails(context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
       child: Container(
         child: Column(
           children: [
@@ -214,12 +234,31 @@ class PaymentDetail extends StatelessWidget {
                 child: Column(
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Payment Summary',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
-                                color: Colors.black))
+                                color: Colors.black)),
+                        GestureDetector(
+                          onTap: () => print('selectPatmet'),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text('Select PaymentMethod',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: kPrimaryColor,
+                                      fontWeight: FontWeight.bold)),
+                              Icon(
+                                Icons.chevron_right,
+                                size: 12,
+                                color: kPrimaryColor,
+                              )
+                            ],
+                          ),
+                        )
                       ],
                     ),
                     SizedBox(
@@ -265,12 +304,9 @@ class PaymentDetail extends StatelessWidget {
                 )),
             Container(
                 width: double.infinity,
-                height: getProportionateScreenWidth(50),
+                height: getProportionateScreenWidth(40),
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                      context,
-                      SummarySuccess.routeName,
-                      ((Route<dynamic> route) => false)),
+                  onPressed: () => _confirmSumary(context),
                   child: Text(
                     'Confirm',
                     style: TextStyle(fontSize: 16),

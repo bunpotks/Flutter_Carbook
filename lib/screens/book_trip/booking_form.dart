@@ -1,5 +1,6 @@
 import 'package:carbook/components/default_button.dart';
 import 'package:carbook/screens/Maps/map_select.dart';
+import 'package:carbook/screens/Maps/search_location_model.dart';
 import 'package:carbook/screens/passenger_profile/passengerprofille_screen.dart';
 import 'package:carbook/screens/sumary/sumary_screen.dart';
 
@@ -21,7 +22,14 @@ class _BookingFormState extends State<BookingForm> {
   // Map<dynamic, dynamic>? passenger;
   // DateTime? timeStart;
   late Passenger passengerData;
+
+  Results? Location_1;
+  Results? Location_2;
+
   TextEditingController passenger = TextEditingController();
+  TextEditingController route1 = TextEditingController();
+  TextEditingController route2 = TextEditingController();
+
   TextEditingController dateStart = TextEditingController(
       text: DateFormat('yyyy-MM-dd').format(DateTime.now()));
   TextEditingController timeStart =
@@ -152,10 +160,20 @@ class _BookingFormState extends State<BookingForm> {
       borderRadius: BorderRadius.circular(10),
       onTap: () => {},
       child: TextFormField(
-        controller: passenger,
+        controller: route1,
+        style: TextStyle(fontSize: 14),
         readOnly: true,
         onTap: () async => Navigator.push(
-            context, MaterialPageRoute(builder: ((context) => MapSelect()))),
+                context, MaterialPageRoute(builder: ((context) => MapSelect())))
+            .then((value) {
+          if (value != null) {
+            setState(() {
+              Location_1 = value;
+              String text = Location_1!.name! + ' - ' + Location_1!.vicinity!;
+              route1.text = text;
+            });
+          }
+        }),
         decoration: InputDecoration(
           labelText: 'สถานที่รับ',
           hintText: 'ระบุสถานที่แรกที่ต้องการให้ไปรับ',
@@ -174,11 +192,23 @@ class _BookingFormState extends State<BookingForm> {
       borderRadius: BorderRadius.circular(10),
       onTap: () => {},
       child: TextFormField(
-        controller: passenger,
+        style: TextStyle(fontSize: 14),
+        controller: route2,
         readOnly: true,
         onTap: () async => Navigator.push(
-            context, MaterialPageRoute(builder: ((context) => MapSelect()))),
+                context, MaterialPageRoute(builder: ((context) => MapSelect())))
+            .then((value) {
+          if (value != null) {
+            setState(() {
+              Location_2 = value;
+              String text = Location_2!.name! + ' - ' + Location_2!.vicinity!;
+              route2.text = text;
+            });
+          }
+        }),
         decoration: InputDecoration(
+          // labelStyle: ,
+          // isDense: true,
           labelText: 'สถานที่ปลายทาง',
           hintText: 'เลือกสถานที่ปลายที่ที่ต้องการไปส่ง',
           floatingLabelBehavior: FloatingLabelBehavior.always,

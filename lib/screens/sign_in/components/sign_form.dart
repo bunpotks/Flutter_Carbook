@@ -21,7 +21,7 @@ class SignForm extends StatefulWidget {
 }
 
 class _SignFormState extends State<SignForm> {
-  final formkey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   String? email = '123';
   String? password;
   bool? remember = false;
@@ -76,15 +76,15 @@ class _SignFormState extends State<SignForm> {
 
   Widget build(BuildContext context) {
     return Form(
-      key: formkey,
+      key: _formKey,
       child: Column(
         children: [
           buildEmailFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
           buildPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
-          buildDateFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
+          // buildDateFormField(),
+          // SizedBox(height: getProportionateScreenHeight(30)),
           Row(
             children: [
               Spacer(),
@@ -112,9 +112,14 @@ class _SignFormState extends State<SignForm> {
 
               // if (_formKey.currentState!.validate()) {
               //   _formKey.currentState!.save();
+
+              //   Navigator.pushNamedAndRemoveUntil(
+              //       context,
+              //       LoginSuccessScreen.routeName,
+              //       ((Route<dynamic> route) => false));
               //   // if all are valid then go to success screen
-              //   KeyboardUtil.hideKeyboard(context);
-              //   Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+              //   // KeyboardUtil.hideKeyboard(context);
+              //   // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               // }
             },
           ),

@@ -25,22 +25,23 @@ class _BookTrip1ScreenState extends State<BookTrip1Screen> {
         appBar: AppBar(
           title: Text(data.category),
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-          child: SingleChildScrollView(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Image.asset(
-                data.image,
-                height: getProportionateScreenWidth(250),
-              ),
-              BookingForm(),
-              SizedBox(
-                height: 30,
-              )
-            ],
-          )),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset(
+                  data.image,
+                  height: getProportionateScreenWidth(250),
+                ),
+                BookingForm(),
+                SizedBox(
+                  height: 30,
+                )
+              ],
+            ),
+          ),
         ));
   }
 }
