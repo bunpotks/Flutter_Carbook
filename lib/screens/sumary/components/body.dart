@@ -205,17 +205,31 @@ class PaymentDetail extends StatelessWidget {
   const PaymentDetail({super.key});
 
   @override
+  // Widget build(BuildContext context) {
+  //   return Container(
+  //     // height: MediaQuery.of(context).size.height * 0.2,
+  //     decoration: BoxDecoration(color: Colors.white, boxShadow: [
+  //       BoxShadow(
+  //         offset: Offset(0, -10),
+  //         blurRadius: 20,
+  //         color: Color(0xFFDADADA).withOpacity(0.3),
+  //       ),
+  //     ]),
+  //     child: SafeArea(
+  //       top: true,
+  //       child: Column(
+  //         children: [
+  //           Text('111'),
+  //           Text('asdsd'),
+  //           Text('asdsd'),
+  //           Text('asdsd'),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
   Widget build(BuildContext context) {
-    return Container(
-        height: 200,
-        decoration: BoxDecoration(color: Colors.white, boxShadow: [
-          BoxShadow(
-            offset: Offset(0, -10),
-            blurRadius: 20,
-            color: Color(0xFFDADADA).withOpacity(0.3),
-          ),
-        ]),
-        child: SafeArea(top: true, child: PaymentDetails(context)));
+    return SafeArea(bottom: false, child: PaymentDetails(context));
   }
 
   Future<void> _confirmSumary(context) async {
@@ -224,87 +238,95 @@ class PaymentDetail extends StatelessWidget {
   }
 
   Widget PaymentDetails(context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-      child: Container(
+    return Container(
+      height: 210,
+      width: double.infinity,
+      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+        BoxShadow(
+          offset: Offset(0, -10),
+          blurRadius: 20,
+          color: Color(0xFFDADADA).withOpacity(0.3),
+        ),
+      ]),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Column(
           children: [
             Container(
-                width: double.infinity,
                 child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Payment Summary',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                                color: Colors.black)),
-                        GestureDetector(
-                          onTap: () => print('selectPatmet'),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text('Select PaymentMethod',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: kPrimaryColor,
-                                      fontWeight: FontWeight.bold)),
-                              Icon(
-                                Icons.chevron_right,
-                                size: 12,
-                                color: kPrimaryColor,
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Subtotal'),
-                        Text('399.00',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14,
-                                color: Colors.black))
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Discount'),
-                        Text('0.00',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14,
-                                color: Colors.black))
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Total'),
-                        Text('399.00',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14,
-                                color: Colors.black))
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    Text('Payment Summary',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            color: Colors.black)),
+                    GestureDetector(
+                      onTap: () => print('selectPatmet'),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text('Select PaymentMethod',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  color: kPrimaryColor,
+                                  fontWeight: FontWeight.bold)),
+                          Icon(
+                            Icons.chevron_right,
+                            size: 12,
+                            color: kPrimaryColor,
+                          )
+                        ],
+                      ),
+                    )
                   ],
-                )),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Subtotal'),
+                    Text('399.00',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                            color: Colors.black))
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Discount'),
+                    Text('0.00',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                            color: Colors.black))
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Total'),
+                    Text('399.00',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                            color: Colors.black))
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+              ],
+            )),
             Container(
+                height: 50,
                 width: double.infinity,
-                height: getProportionateScreenWidth(40),
                 child: ElevatedButton(
                   onPressed: () => _confirmSumary(context),
                   child: Text(

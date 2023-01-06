@@ -97,7 +97,7 @@ class _BookingFormState extends State<BookingForm> {
           hintText: 'ระบุผู้โดยสารที่ต้องการเดินทาง',
           floatingLabelBehavior: FloatingLabelBehavior.always,
           suffixIcon: Icon(
-            Icons.man_outlined,
+            Icons.people,
             color: Colors.grey,
           ),
         ),
@@ -147,7 +147,7 @@ class _BookingFormState extends State<BookingForm> {
           hintText: 'ระบุเวลาที่เดินทาง',
           floatingLabelBehavior: FloatingLabelBehavior.always,
           suffixIcon: Icon(
-            Icons.punch_clock_rounded,
+            Icons.access_time,
             color: Colors.grey,
           ),
         ),
@@ -179,7 +179,7 @@ class _BookingFormState extends State<BookingForm> {
           hintText: 'ระบุสถานที่แรกที่ต้องการให้ไปรับ',
           floatingLabelBehavior: FloatingLabelBehavior.always,
           suffixIcon: Icon(
-            Icons.pin_drop_outlined,
+            Icons.location_on_outlined,
             color: Colors.grey,
           ),
         ),
@@ -213,7 +213,7 @@ class _BookingFormState extends State<BookingForm> {
           hintText: 'เลือกสถานที่ปลายที่ที่ต้องการไปส่ง',
           floatingLabelBehavior: FloatingLabelBehavior.always,
           suffixIcon: Icon(
-            Icons.pin_drop_outlined,
+            Icons.location_on_outlined,
             color: Colors.grey,
           ),
         ),

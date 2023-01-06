@@ -11,11 +11,10 @@ class SumaryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Body(),
-      bottomNavigationBar: PaymentDetail(),
-    );
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: Body(),
+        bottomNavigationBar: PaymentDetail());
   }
 }
