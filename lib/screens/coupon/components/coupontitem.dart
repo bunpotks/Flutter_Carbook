@@ -1,8 +1,6 @@
+import 'dart:convert';
 import 'package:carbook/constants.dart';
-import 'package:carbook/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CouponItemModel {
   String? id;
@@ -92,15 +90,27 @@ class _CouponItemState extends State<CouponItem> {
       color: Color(0xFFF5F6F9),
       child: ListView.builder(
         itemCount: item.length,
-        itemBuilder: (context, index) => Coupon(index),
+        itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
+          child: Coupon(
+            item: item[index],
+            press: () => {print(jsonEncode(item))},
+          ),
+        ),
       ),
     );
   }
+}
 
-  Container Coupon(index) {
+class Coupon extends StatelessWidget {
+  final CouponItemModel? item;
+  final Function? press;
+
+  const Coupon({Key? key, this.item, this.press}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 10, right: 10),
-      margin: EdgeInsets.only(top: index == 0 ? 10 : 0, bottom: 5),
       height: 150,
       child: Card(
         shape: RoundedRectangleBorder(
@@ -108,7 +118,7 @@ class _CouponItemState extends State<CouponItem> {
         ),
         semanticContainer: false,
         child: InkWell(
-          onTap: () => print(index),
+          onTap: press as void Function()?,
           borderRadius: BorderRadius.circular(20),
           child: Row(
             children: [
@@ -124,7 +134,7 @@ class _CouponItemState extends State<CouponItem> {
                     ),
                     child: Center(
                       child: Text(
-                        item[index].percent.toString(),
+                        item!.percent.toString(),
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
@@ -148,12 +158,12 @@ class _CouponItemState extends State<CouponItem> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          item[index].desc.toString(),
+                          item!.desc.toString(),
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          item[index].exp.toString(),
+                          item!.exp.toString(),
                           style: TextStyle(
                               fontSize: 12, fontWeight: FontWeight.bold),
                         ),
