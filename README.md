@@ -21,9 +21,9 @@ samples, guidance on mobile development, and a full API reference.
 
 
 <p float="left">
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s1.png" alt="drawing" width="300"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s2.png" alt="drawing" width="300"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s3.png" alt="drawing" width="300"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s1.png" alt="drawing" width="150"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s2.png" alt="drawing" width="150"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s3.png" alt="drawing" width="150"/>
 </p>
 
 
