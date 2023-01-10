@@ -1,6 +1,7 @@
 # bookcar
 
-A new Flutter project.
+This application is A template for displaying the ux/ui of the booking application. No user data is accessed at all.
+We create a real working screen to be used when building a real application.
 
 ## Getting Started
 
@@ -15,8 +16,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<Center>
-<div style="text-align:center;width:200px;height:200px"><img src="https://thumbs.dreamstime.com/b/lonely-elephant-against-sunset-beautiful-sun-clouds-savannah-serengeti-national-park-africa-tanzania-artistic-imag-image-106950644.jpg" /></div>
-
-</Center>
-
+![](https://user-images.githubusercontent.com/103012749/211511683-da1ec171-6034-4177-8944-f9a488f2dc22.png)
