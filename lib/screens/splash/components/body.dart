@@ -24,16 +24,16 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     List<Map<String, String>> splashData = [
       {
+        "text": AppLocalizations.of(context)!.splash_desc3,
+        "image": "assets/images/tutorial3.gif"
+      },
+      {
         "text": AppLocalizations.of(context)!.splash_desc1,
         "image": "assets/images/tutorial2.gif"
       },
       {
         "text": AppLocalizations.of(context)!.splash_desc2,
         "image": "assets/images/sp_2.webp"
-      },
-      {
-        "text": AppLocalizations.of(context)!.splash_desc3,
-        "image": "assets/images/tutorial3.gif"
       },
     ];
     return SafeArea(

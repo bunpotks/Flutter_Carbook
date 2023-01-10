@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
 import 'categories.dart';
-import 'promotion_banner.dart';
 import 'home_header.dart';
-import 'popular_product.dart';
 import 'special_offers.dart';
 import 'promotion.dart';
+import 'coupon.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -33,11 +32,10 @@ class Body extends StatelessWidget {
                     Categories(),
                     SizedBox(height: getProportionateScreenHeight(20)),
                     Promotion(),
-                    // SizedBox(height: getProportionateScreenWidth(30)),
-                    // Promotion(),
+                    SizedBox(height: getProportionateScreenWidth(20)),
+                    Coupon(),
                     SizedBox(height: getProportionateScreenWidth(30)),
                     // PopularProducts(),
-                    // SizedBox(height: getProportionateScreenWidth(30)),
                   ],
                 ),
               ),

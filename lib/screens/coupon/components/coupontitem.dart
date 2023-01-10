@@ -1,6 +1,46 @@
 import 'dart:convert';
 import 'package:carbook/constants.dart';
+import 'package:carbook/screens/blank/examples/cupertino_share.dart';
 import 'package:flutter/material.dart';
+
+// class testModel {
+//   List<Item>? item;
+
+//   testModel({this.item});
+
+//   testModel.fromJson(Map<String, dynamic> json) {
+//     if (json['item'] != null) {
+//       item = <Item>[];
+//       json['item'].forEach((v) {
+//         item!.add(new Item.fromJson(v));
+//       });
+//     }
+//   }
+
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//     if (this.item != null) {
+//       data['item'] = this.item!.map((v) => v.toJson()).toList();
+//     }
+//     return data;
+//   }
+// }
+
+// class Item {
+//   dynamic id;
+
+//   Item({this.id});
+
+//   Item.fromJson(Map<String, dynamic> json) {
+//     id = json['id'];
+//   }
+
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//     data['id'] = this.id;
+//     return data;
+//   }
+// }
 
 class CouponItemModel {
   String? id;
@@ -59,25 +99,25 @@ class _CouponItemState extends State<CouponItem> {
         exp: '20/02/2023 - 20/03/2023',
         percent: '10  Baht'),
     CouponItemModel(
-        id: '1',
+        id: '4',
         name: 'coupon discount',
         desc: '10 % of Sumer Coupon',
         exp: '20/02/2023 - 20/03/2023',
         percent: '50 % Off'),
     CouponItemModel(
-        id: '1',
+        id: '5',
         name: 'coupon discount',
         desc: '10 % of birthday Coupon',
         exp: '20/02/2023 - 20/03/2023',
         percent: '10 % Off'),
     CouponItemModel(
-        id: '1',
+        id: '6',
         name: 'coupon discount',
         desc: '10 % of birthday Coupon',
         exp: '20/02/2023 - 20/03/2023',
         percent: '10 % Off'),
     CouponItemModel(
-        id: '1',
+        id: '7',
         name: 'coupon discount',
         desc: '10 % of birthday Coupon',
         exp: '20/02/2023 - 20/03/2023',
@@ -94,7 +134,19 @@ class _CouponItemState extends State<CouponItem> {
           padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
           child: Coupon(
             item: item[index],
-            press: () => {print(jsonEncode(item))},
+            press: () {
+              setState(() {
+                // item.removeAt(index);
+                item.add(CouponItemModel(
+                    id: (item.length + 1).toString(),
+                    name: 'coupon discount',
+                    desc: (item.length + 1).toString() +
+                        '10 % of birthday Coupon',
+                    exp: '20/02/2023 - 20/03/2023',
+                    percent: '10 % Off'));
+                // item.removeWhere((items) => items.id == '1');
+              });
+            },
           ),
         ),
       ),
@@ -110,6 +162,22 @@ class Coupon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // var data = {
+    //   "item": [
+    //     {"id": "1"},
+    //     {"id": "2"},
+    //     {"id": '222'},
+    //   ],
+    // };
+
+    // testModel eiei = testModel.fromJson(data);
+    // List<Item>
+
+    // print(eiei.item.toString());
+
+    // List<Item> dataItem =
+    //     List<Item>.from(data['item']!.map((model) => Item.fromJson(model)));
+
     return Container(
       height: 150,
       child: Card(
@@ -122,6 +190,7 @@ class Coupon extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           child: Row(
             children: [
+              // Text(eiei.item![2]!.id.toString()),
               Expanded(
                   flex: 2,
                   child: Container(

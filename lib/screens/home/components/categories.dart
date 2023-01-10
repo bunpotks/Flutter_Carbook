@@ -28,11 +28,11 @@ class Categories extends StatelessWidget {
         "text": "คูปอง",
         "press": () => Navigator.pushNamed(context, CouponScreen.routeName),
       },
-      {
-        "icon": "assets/icons/history-svgrepo-com.svg",
-        "text": "ประวัติ",
-        "press": () => Navigator.pushNamed(context, BlankScreen.routeName),
-      },
+      // {
+      //   "icon": "assets/icons/history-svgrepo-com.svg",
+      //   "text": "ประวัติ",
+      //   "press": () => Navigator.pushNamed(context, BlankScreen.routeName),
+      // },
       {
         "icon": "assets/icons/Bill.svg",
         "text": "การชำระเงิน",
