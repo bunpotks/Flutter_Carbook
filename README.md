@@ -32,47 +32,68 @@ samples, guidance on mobile development, and a full API reference.
 ## Register & Signin Screen
 
 <p float="left">
+<kbd>
+
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s4.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s5.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s6.png" alt="drawing" width="200"/>
+</kbd>
+
 </p>
 
 <p float="left">
+<kbd>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s7.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s8.png" alt="drawing" width="200"/>
+</kbd>
+
 </p>
 
 ## Menu & Profile Screen
 
 <p float="left">
+<kbd>
+
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s18.png" alt="drawing" width="200"/>
+</kbd>
+
 </p>
 
 
 ## Booking Screen
 
 <p float="left">
+<kbd>
+
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s11.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s12.png" alt="drawing" width="200"/>
+</kbd>
 
 </p>
 
 ## Passenger Profile & Booking List & Coupon  Screen
 
 <p float="left">
+<kbd>
+
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s13.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s14.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s15.png" alt="drawing" width="200"/>
+</kbd>
 
 </p>
 
 ## History Screen
 
 <p float="left">
+<kbd>
+
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s16.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s17.png" alt="drawing" width="200"/>
+</kbd>
+
 </p>
 
 
