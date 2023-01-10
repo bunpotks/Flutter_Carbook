@@ -15,8 +15,6 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<Center>
-<div style="text-align:center;width:200px;height:200px"><img src="https://thumbs.dreamstime.com/b/lonely-elephant-against-sunset-beautiful-sun-clouds-savannah-serengeti-national-park-africa-tanzania-artistic-imag-image-106950644.jpg" /></div>
+![Simulator Screen Shot - iPhone 13 - 2023-01-10 at 14 28 59](https://user-images.githubusercontent.com/103012749/211511683-da1ec171-6034-4177-8944-f9a488f2dc22.png)
 
-</Center>
 
