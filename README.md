@@ -19,6 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 
 <!-- ![](https://user-images.githubusercontent.com/103012749/211511683-da1ec171-6034-4177-8944-f9a488f2dc22.png) -->
 
+## Splash Screen
 
 <p float="left">
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s1.png" alt="drawing" width="150"/>
@@ -26,11 +27,19 @@ samples, guidance on mobile development, and a full API reference.
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s3.png" alt="drawing" width="150"/>
 </p>
 
+## Register & Signin Screen
 
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s4.png" alt="drawing" width="300"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s5.png" alt="drawing" width="300"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s6.png" alt="drawing" width="300"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s7.png" alt="drawing" width="300"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s8.png" alt="drawing" width="300"/>
+<p float="left">
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s4.png" alt="drawing" width="150"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s5.png" alt="drawing" width="150"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s6.png" alt="drawing" width="150"/>
+</p>
+
+<p float="left">
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s7.png" alt="drawing" width="150"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s8.png" alt="drawing" width="150"/>
+</p>
+
+
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="300"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="300"/>
