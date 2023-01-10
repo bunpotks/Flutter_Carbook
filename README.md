@@ -31,7 +31,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Register & Signin Screen
 
-<p float="left">
+<p float="left"  align="center">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s4.png" alt="drawing" width="200"/>
@@ -41,7 +41,7 @@ samples, guidance on mobile development, and a full API reference.
 
 </p>
 
-<p float="left">
+<p float="left"  align="center">
 <kbd>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s7.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s8.png" alt="drawing" width="200"/>
@@ -51,7 +51,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Menu & Profile Screen
 
-<p float="left">
+<p float="left"  align="center">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="200"/>
@@ -63,7 +63,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Booking Screen
 
-<p float="left">
+<p float="left"  align="center">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="200"/>
@@ -75,7 +75,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Passenger Profile & Booking List & Coupon  Screen
 
-<p float="left">
+<p float="left"  align="center">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s13.png" alt="drawing" width="200"/>
@@ -87,7 +87,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## History Screen
 
-<p float="left">
+<p float="left"  align="center">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s16.png" alt="drawing" width="200"/>
