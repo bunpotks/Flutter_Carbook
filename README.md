@@ -17,14 +17,13 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-<!-- ![](https://user-images.githubusercontent.com/103012749/211511683-da1ec171-6034-4177-8944-f9a488f2dc22.png) -->
 
 ## Splash Screen
 
 <p float="left">
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s1.png" alt="drawing" width="150"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s2.png" alt="drawing" width="150"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s3.png" alt="drawing" width="150"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s1.png" alt="drawing" width="200"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s2.png" alt="drawing" width="200"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s3.png" alt="drawing" width="200"/>
 </p>
 
 ## Register & Signin Screen
@@ -41,5 +40,5 @@ samples, guidance on mobile development, and a full API reference.
 </p>
 
 
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="300"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="300"/>
+<!-- <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="300"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="300"/> -->
