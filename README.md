@@ -1,4 +1,4 @@
-# Carbook
+# bookcar
 
 This application is A template for displaying the ux/ui of the booking application. No user data is accessed at all.
 We create a real working screen to be used when building a real application.
