@@ -29,7 +29,10 @@
 .pub-cache/
 .pub/
 /build/
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 8610481 (Update .gitignore)
 
 # Web related
 lib/generated_plugin_registrant.dart

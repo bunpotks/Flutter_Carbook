@@ -26,7 +26,6 @@ class Body extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              RemarkField(),
               SizedBox(
                 height: 30,
               ),
@@ -44,7 +43,7 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.all(0.0),
         child: Container(
           decoration: BoxDecoration(
-              color: kSecondaryColor.withOpacity(0.15),
+              color: kSecondaryColor.withOpacity(0.2),
               borderRadius: BorderRadius.circular(10)),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -185,150 +184,93 @@ class Body extends StatelessWidget {
       ]),
     );
   }
-
-  Widget RemarkField() {
-    return TextFormField(
-      decoration: InputDecoration(
-        labelText: 'หมายเหตุ',
-        hintText: 'ระบุหมายเหตุเพื่อบอกให้คนขับรถทราบ',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: Icon(
-          Icons.textsms_outlined,
-          color: Colors.grey,
-        ),
-      ),
-    );
-  }
 }
 
 class PaymentDetail extends StatelessWidget {
   const PaymentDetail({super.key});
 
   @override
-  // Widget build(BuildContext context) {
-  //   return Container(
-  //     // height: MediaQuery.of(context).size.height * 0.2,
-  //     decoration: BoxDecoration(color: Colors.white, boxShadow: [
-  //       BoxShadow(
-  //         offset: Offset(0, -10),
-  //         blurRadius: 20,
-  //         color: Color(0xFFDADADA).withOpacity(0.3),
-  //       ),
-  //     ]),
-  //     child: SafeArea(
-  //       top: true,
-  //       child: Column(
-  //         children: [
-  //           Text('111'),
-  //           Text('asdsd'),
-  //           Text('asdsd'),
-  //           Text('asdsd'),
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
   Widget build(BuildContext context) {
-    return SafeArea(bottom: false, child: PaymentDetails(context));
-  }
-
-  Future<void> _confirmSumary(context) async {
-    Navigator.pushNamedAndRemoveUntil(
-        context, SummarySuccess.routeName, ((Route<dynamic> route) => false));
+    return Container(
+        height: 210,
+        decoration: BoxDecoration(color: Colors.white, boxShadow: [
+          BoxShadow(
+            offset: Offset(0, -10),
+            blurRadius: 20,
+            color: Color(0xFFDADADA).withOpacity(0.3),
+          ),
+        ]),
+        child: SafeArea(top: true, child: PaymentDetails(context)));
   }
 
   Widget PaymentDetails(context) {
-    return Container(
-      height: 210,
-      width: double.infinity,
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
-        BoxShadow(
-          offset: Offset(0, -10),
-          blurRadius: 20,
-          color: Color(0xFFDADADA).withOpacity(0.3),
-        ),
-      ]),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+      child: Container(
         child: Column(
           children: [
             Container(
-                child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Payment Summary',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                            color: Colors.black)),
-                    GestureDetector(
-                      onTap: () => print('selectPatmet'),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text('Select PaymentMethod',
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  color: kPrimaryColor,
-                                  fontWeight: FontWeight.bold)),
-                          Icon(
-                            Icons.chevron_right,
-                            size: 12,
-                            color: kPrimaryColor,
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Subtotal'),
-                    Text('399.00',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                            color: Colors.black))
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Discount'),
-                    Text('0.00',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                            color: Colors.black))
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Total'),
-                    Text('399.00',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                            color: Colors.black))
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-              ],
-            )),
-            Container(
-                height: 50,
                 width: double.infinity,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text('Payment Summary',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                color: Colors.black))
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Subtotal'),
+                        Text('399.00',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                                color: Colors.black))
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Discount'),
+                        Text('0.00',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                                color: Colors.black))
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Total'),
+                        Text('399.00',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                                color: Colors.black))
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                )),
+            Container(
+                width: double.infinity,
+                height: getProportionateScreenWidth(50),
                 child: ElevatedButton(
-                  onPressed: () => _confirmSumary(context),
+                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      SummarySuccess.routeName,
+                      ((Route<dynamic> route) => false)),
                   child: Text(
                     'Confirm',
                     style: TextStyle(fontSize: 16),
