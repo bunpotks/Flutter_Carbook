@@ -9,7 +9,6 @@ import 'package:carbook/screens/login_success/login_success_screen.dart';
 import 'package:carbook/screens/home/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:intl/intl.dart';
 
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
@@ -21,12 +20,16 @@ class SignForm extends StatefulWidget {
 }
 
 class _SignFormState extends State<SignForm> {
+<<<<<<< HEAD
   final _formKey = GlobalKey<FormState>();
   String? email = '123';
+=======
+  final formkey = GlobalKey<FormState>();
+  String? email;
+>>>>>>> parent of 40b6b84 (Feture update)
   String? password;
   bool? remember = false;
   dynamic prefs = false;
-  TextEditingController date = TextEditingController();
 
   final List<String?> errors = [];
 
@@ -54,26 +57,6 @@ class _SignFormState extends State<SignForm> {
     prefs = await SharedPreferences.getInstance();
   }
 
-  getDate() async {
-    DateTime? pickedDate = await showDatePicker(
-        context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime(2022),
-        // DateTime.now() - not to allow to choose before today.
-        lastDate: DateTime(2100));
-
-    if (pickedDate != null) {
-      String formattedDate = DateFormat('yyyy-MM-dd').format(pickedDate);
-      // print(formattedDate);
-
-      setState(() {
-        date.text = formattedDate; //set output date to TextField value.
-      });
-    } else {
-      print('close');
-    }
-  }
-
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
@@ -83,8 +66,11 @@ class _SignFormState extends State<SignForm> {
           SizedBox(height: getProportionateScreenHeight(30)),
           buildPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
+<<<<<<< HEAD
           // buildDateFormField(),
           // SizedBox(height: getProportionateScreenHeight(30)),
+=======
+>>>>>>> parent of 40b6b84 (Feture update)
           Row(
             children: [
               Spacer(),
@@ -128,6 +114,7 @@ class _SignFormState extends State<SignForm> {
     );
   }
 
+<<<<<<< HEAD
   InkWell buildDateFormField() {
     return InkWell(
       borderRadius: BorderRadius.circular(10),
@@ -171,6 +158,8 @@ class _SignFormState extends State<SignForm> {
     );
   }
 
+=======
+>>>>>>> parent of 40b6b84 (Feture update)
   TextFormField buildPasswordFormField() {
     return TextFormField(
       obscureText: true,
@@ -207,7 +196,7 @@ class _SignFormState extends State<SignForm> {
 
   TextFormField buildEmailFormField() {
     return TextFormField(
-      // controller: TextEditingController()..text,
+      // controller: TextEditingController()..text = 'Your initial value',
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue,
       // initialValue: email,
