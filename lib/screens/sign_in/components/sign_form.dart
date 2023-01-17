@@ -20,13 +20,8 @@ class SignForm extends StatefulWidget {
 }
 
 class _SignFormState extends State<SignForm> {
-<<<<<<< HEAD
-  final _formKey = GlobalKey<FormState>();
-  String? email = '123';
-=======
   final formkey = GlobalKey<FormState>();
   String? email;
->>>>>>> parent of 40b6b84 (Feture update)
   String? password;
   bool? remember = false;
   dynamic prefs = false;
@@ -59,18 +54,13 @@ class _SignFormState extends State<SignForm> {
 
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey,
+      // key: _formKey,
       child: Column(
         children: [
           buildEmailFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
           buildPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
-<<<<<<< HEAD
-          // buildDateFormField(),
-          // SizedBox(height: getProportionateScreenHeight(30)),
-=======
->>>>>>> parent of 40b6b84 (Feture update)
           Row(
             children: [
               Spacer(),
@@ -114,52 +104,6 @@ class _SignFormState extends State<SignForm> {
     );
   }
 
-<<<<<<< HEAD
-  InkWell buildDateFormField() {
-    return InkWell(
-      borderRadius: BorderRadius.circular(10),
-      onTap: () => {},
-      child: TextFormField(
-        controller: date,
-        // obscureText: true,
-        readOnly: true,
-        onTap: () async => await getDate(),
-        onSaved: (newValue) => password = newValue,
-        onChanged: (value) {
-          if (value.isNotEmpty) {
-            removeError(error: kPassNullError);
-          } else if (value.length >= 8) {
-            removeError(error: kShortPassError);
-          }
-          return null;
-        },
-        validator: (value) {
-          if (value!.isEmpty) {
-            addError(error: kPassNullError);
-            return "";
-          } else if (value.length < 8) {
-            addError(error: kShortPassError);
-            return "";
-          }
-          return null;
-        },
-        decoration: InputDecoration(
-          labelText: AppLocalizations.of(context)!.signin_input_date,
-          hintText: AppLocalizations.of(context)!.signin_input_date_placeholder,
-          // If  you are using latest version of flutter then lable text and hint text shown like this
-          // if you r using flutter less then 1.20.* then maybe this is not working properly
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          suffixIcon: Icon(
-            Icons.date_range,
-            color: Colors.grey,
-          ),
-        ),
-      ),
-    );
-  }
-
-=======
->>>>>>> parent of 40b6b84 (Feture update)
   TextFormField buildPasswordFormField() {
     return TextFormField(
       obscureText: true,
