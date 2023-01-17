@@ -46,6 +46,7 @@ dependencies:
   google_maps_flutter: ^2.2.2
   location: ^4.2.0
   ticket_widget: ^0.0.1
+  responsive_builder: ^0.4.3
 
 
 dev_dependencies:

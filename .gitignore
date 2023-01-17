@@ -29,6 +29,10 @@
 .pub-cache/
 .pub/
 /build/
+# /android/
+# /src/center/
+
+
 
 
 # Web related
