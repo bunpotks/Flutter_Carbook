@@ -9,8 +9,6 @@
     "signin_subdesc": "เข้าสู่ระบบด้วย อีเมลและรหัสผ่าน หรือเข้าสู่ระบบด้วยแอปพลิเคชันอื่นๆ",
     "signin_input_email": "อีเมล",
     "signin_input_email_placeholder": "ระบุอีเมลผู้ใช้",
-    "signin_input_date": "วันที่",
-    "signin_input_date_placeholder": "ระบุวันที่",
     "signin_input_password": "รหัสผ่าน",
     "signin_input_password_placeholder": "ระบุรหัสผ่าน",
     "signin_input_password_confirm": "ยืนยันรหัสผ่าน",

@@ -1,4 +1,4 @@
-# Carbook
+# bookcar
 
 This application is A template for displaying the ux/ui of the booking application. No user data is accessed at all.
 We create a real working screen to be used when building a real application.
@@ -25,7 +25,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Splash Screen
 
-<p float="left"  align="center">
+<p float="left">
 <kbd>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s1.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s2.png" alt="drawing" width="200"/>
@@ -36,7 +36,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Register & Signin Screen
 
-<p float="left"  align="center">
+<p float="left">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s4.png" alt="drawing" width="200"/>
@@ -46,7 +46,7 @@ samples, guidance on mobile development, and a full API reference.
 
 </p>
 
-<p float="left"  align="center">
+<p float="left">
 <kbd>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s7.png" alt="drawing" width="200"/>
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s8.png" alt="drawing" width="200"/>
@@ -56,7 +56,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Menu & Profile Screen
 
-<p float="left"  align="center">
+<p float="left">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="200"/>
@@ -68,7 +68,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Booking Screen
 
-<p float="left"  align="center">
+<p float="left">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="200"/>
@@ -80,7 +80,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Passenger Profile & Booking List & Coupon  Screen
 
-<p float="left"  align="center">
+<p float="left">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s13.png" alt="drawing" width="200"/>
@@ -92,7 +92,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## History Screen
 
-<p float="left"  align="center">
+<p float="left">
 <kbd>
 
 <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s16.png" alt="drawing" width="200"/>
@@ -102,3 +102,8 @@ samples, guidance on mobile development, and a full API reference.
 </p>
 
 
+
+
+
+<!-- <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="300"/>
+<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="300"/> -->
