@@ -17,7 +17,7 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-![](https://github.com/noteyn51/FlutterCarbook/blob/r1/assets/images/intros.gif)
+![](https://github.com/noteyn51/FlutterCarbook/blob/main/assets/images/intros.gif)
 
 
 
