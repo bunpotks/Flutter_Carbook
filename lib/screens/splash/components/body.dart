@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carbook/constants.dart';
 import 'package:flutter/cupertino.dart';
-
 import 'package:carbook/screens/sign_in/sign_in_screen.dart';
 import 'package:carbook/size_config.dart';
-
-// This is the best practice
-import '../components/splash_content.dart';
-import '../../../components/default_button.dart';
 import 'package:carbook/components/switch_language.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-// import 'package:carbook/size_config.dart';
+import '../components/splash_content.dart';
+import '../../../components/default_button.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -24,7 +20,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     List<Map<String, String>> splashData = [
       {
-        "text": AppLocalizations.of(context)!.splash_desc3,
+        "text": AppLocalizations.of(context)!.splash_desc1,
         "image": "assets/images/intros.gif"
       },
       {

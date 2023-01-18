@@ -91,8 +91,36 @@ class _BodyState extends State<Body> {
     );
   }
 }
-  // Navigator.push(
-  //                         context,
-  //                         CupertinoPageRoute(
-  //                             builder: (context) => CupertinoSharePage()),
-  //                       )
+
+class TextFunc extends StatefulWidget {
+  const TextFunc({super.key});
+
+  @override
+  State<TextFunc> createState() => _TextFuncState();
+}
+
+class _TextFuncState extends State<TextFunc> {
+  String k = '';
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: TextButton(
+              onPressed: () => setState(() {
+                    // k++;
+                  }),
+              child: Text('Hello')),
+        ),
+        Text(k.toString())
+      ],
+    );
+  }
+}
