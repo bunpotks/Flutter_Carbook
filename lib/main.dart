@@ -231,7 +231,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Carbook',
+      title: 'Flutter Carbook Office',
       theme: theme(),
       locale: _locale,
       localizationsDelegates: [
