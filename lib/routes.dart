@@ -2,6 +2,7 @@ import 'package:carbook/screens/book_trip/booktrip_1.dart';
 import 'package:carbook/screens/passenger_detail/passenger_detail.dart';
 import 'package:carbook/screens/sumary/components/sumary_success.dart';
 import 'package:carbook/screens/sumary/sumary_screen.dart';
+import 'package:carbook/screens/test/test_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:carbook/screens/cart/cart_screen.dart';
 import 'package:carbook/screens/complete_profile/complete_profile_screen.dart';
@@ -49,5 +50,6 @@ final Map<String, WidgetBuilder> routes = {
   PassengerDetail.routeName: (context) => PassengerDetail(),
   BookTrip1Screen.routeName: (context) => BookTrip1Screen(),
   SumaryScreen.routeName: ((context) => SumaryScreen()),
-  SummarySuccess.routeName: ((context) => SummarySuccess())
+  SummarySuccess.routeName: ((context) => SummarySuccess()),
+  TestPost.routeName: ((context) => TestPost()),
 };

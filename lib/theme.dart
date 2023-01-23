@@ -4,6 +4,7 @@ import 'constants.dart';
 
 ThemeData theme() {
   return ThemeData(
+      useMaterial3: true,
       primarySwatch: Colors.blue,
       // brightness: Brightness.dark,
       scaffoldBackgroundColor: Colors.white,
