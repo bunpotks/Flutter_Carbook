@@ -83,8 +83,6 @@ class _TestPostState extends State<TestPost> {
           );
         }
       });
-
-      // setState(() {});
     }
 
     return Scaffold(
@@ -95,7 +93,7 @@ class _TestPostState extends State<TestPost> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(child: Text('Post'), onPressed: Press),
-            if (apiData != null) (Text(apiData!.data!)),
+            if (apiData != null) (Text(apiData!.id!)),
           ],
         ),
       ),
