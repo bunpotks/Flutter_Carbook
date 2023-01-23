@@ -1,4 +1,5 @@
 import 'package:carbook/service/alert_dialog.dart';
+import 'package:carbook/service/fetch_service.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -36,51 +37,27 @@ class TestPost extends StatefulWidget {
 
 class _TestPostState extends State<TestPost> {
   TestApiModel? apiData;
-  getTestApi() async {
-    final String url = 'http://localhost:8888/testapi/testapi.php';
-    final response = await http.post(Uri.parse(url));
-
-    if (response.statusCode == 200) {
-      var res = jsonDecode(response.body);
-
-      if (res['status'] == 'success') {
-        return TestApiModel.fromJson(jsonDecode(response.body));
-      } else {
-        return null;
-      }
-    } else {
-      return null;
-
-      // If the server did not return a 201 CREATED response,
-      // then throw an exception
-      // return [];
-      // .
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     Press() async {
-      getTestApi().then((value) {
-        if (value != null) {
+      showLoading(context);
+      Map<dynamic, dynamic> dataRequest = {"id": "2323"};
+      await FetchService()
+          .post('/testapi/testapi.php', dataRequest)
+          .then((response) {
+        var res = jsonDecode(response);
+        hideloading(context);
+        if (response != null && res['status'] == 'success') {
           setState(() {
-            apiData = value;
+            apiData = TestApiModel.fromJson(res);
           });
         } else {
           showDialog(
-            barrierDismissible: false,
-            context: context,
-            builder: (BuildContext context) => CustomConfirmDialog(
-              title: 'แจ้งเตือน',
-              desc: 'ไม่สามารถเชื่อมต่อข้อมูลได้ กรุณาลองใหม่อีกครั้ง',
-              press: () {
-                Navigator.pop(context);
-              },
-              cancel: () {
-                Navigator.pop(context);
-              },
-            ),
-          );
+              context: context,
+              builder: ((context) => CustomAlertDialog(
+                    press: () => Navigator.pop(context),
+                  )));
         }
       });
     }

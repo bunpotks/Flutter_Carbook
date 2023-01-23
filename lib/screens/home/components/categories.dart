@@ -40,7 +40,7 @@ class Categories extends StatelessWidget {
         "press": () => Navigator.pushNamed(context, HistoryScreen.routeName)
       },
       {
-        "icon": "assets/icons/Bill.svg",
+        "icon": "assets/icons/user-svgrepo-com.svg",
         "text": "Test",
         "press": () => Navigator.pushNamed(context, TestPost.routeName)
       },

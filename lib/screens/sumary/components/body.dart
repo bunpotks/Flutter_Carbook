@@ -161,7 +161,7 @@ class Body extends StatelessWidget {
             style: TextStyle(fontSize: 14),
           ),
           subtitle: Text(
-            'Christopher Nolan',
+            'John Steve',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 15, color: Colors.black),
           ),
