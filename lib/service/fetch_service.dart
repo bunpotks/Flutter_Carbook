@@ -6,9 +6,9 @@ class FetchService {
   String url = "http://localhost:8888";
   dynamic body;
 
-  FetchService() {
-    // print('123');
-  }
+  // FetchService() {
+  //   // print('123');
+  // }
 
   Future<dynamic> post(data, bodyRequest) async {
     url += data;
