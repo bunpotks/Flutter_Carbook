@@ -37,15 +37,14 @@ class TestPost extends StatefulWidget {
 
 class _TestPostState extends State<TestPost> {
   TestApiModel? apiData;
+  final fetch = FetchService();
 
   @override
   Widget build(BuildContext context) {
     Press() async {
       showLoading(context);
-      Map<dynamic, dynamic> dataRequest = {"id": "2323"};
-      await FetchService()
-          .post('/testapi/testapi.php', dataRequest)
-          .then((response) {
+      Map<dynamic, dynamic> dataRequest = {"id": "Hello World"};
+      await fetch.post('/testapi/testapi.php', dataRequest).then((response) {
         var res = jsonDecode(response);
         hideloading(context);
         if (response != null && res['status'] == 'success') {
