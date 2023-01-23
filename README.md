@@ -17,10 +17,10 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-![](https://github.com/noteyn51/FlutterCarbook/blob/main/assets/images/intros.gif)
-
-
-
+<p align="center">
+  <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/assets/images/intros.gif" width="1000"/>
+</p>
+  
 
 
 ## Splash Screen
