@@ -7,21 +7,25 @@ class TestApiModel {
   String? id;
   String? data;
   String? desc;
-
-  TestApiModel({this.id, this.data, this.desc});
+  TestApiModel({
+    this.id,
+    this.data,
+    this.desc,
+  });
 
   TestApiModel.fromJson(Map<String, dynamic> json) {
+    // print(json);
     id = json['id'];
     data = json['data'];
     desc = json['desc'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['data'] = this.data;
-    data['desc'] = this.desc;
-    return data;
+    final _data = <String, dynamic>{};
+    _data['id'] = id;
+    _data['data'] = data;
+    _data['desc'] = desc;
+    return _data;
   }
 }
 
@@ -47,11 +51,19 @@ class _TestPostState extends State<TestPost> {
       await fetch.post('/testapi/testapi.php', dataRequest).then((response) {
         var res = jsonDecode(response);
         hideloading(context);
-        if (response != null && res['status'] == 'success') {
-          setState(() {
-            apiData = TestApiModel.fromJson(res);
-          });
-        } else {
+        try {
+          if (response != null && res['status'] == 'success') {
+            setState(() {
+              apiData = TestApiModel.fromJson(res);
+            });
+          } else {
+            showDialog(
+                context: context,
+                builder: ((context) => CustomAlertDialog(
+                      press: () => Navigator.pop(context),
+                    )));
+          }
+        } catch (e) {
           showDialog(
               context: context,
               builder: ((context) => CustomAlertDialog(
@@ -69,7 +81,7 @@ class _TestPostState extends State<TestPost> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(child: Text('Post'), onPressed: Press),
-            if (apiData != null) (Text(apiData!.id!)),
+            if (apiData != null) (Text(apiData!.id.toString())),
           ],
         ),
       ),
