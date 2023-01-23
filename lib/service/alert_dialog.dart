@@ -81,7 +81,7 @@ class CustomLoadingDialog extends StatelessWidget {
               height: 15,
             ),
             // Some text
-            Text('Loadings...Fixed')
+            Text('Loadings...develop')
           ],
         ),
       ),
