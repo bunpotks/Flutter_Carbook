@@ -8,10 +8,6 @@ class FetchService {
   String url = "http://localhost:8888";
   dynamic body;
 
-  // FetchService() {
-  //   // print('123');
-  // }
-
   Future<dynamic> post(data, bodyRequest) async {
     url += data;
     body = bodyRequest;
@@ -26,7 +22,7 @@ class FetchService {
       if (response.statusCode == 200) {
         return response.body;
       } else {
-        throw HttpException('Connection Failed'); // สร้
+        throw HttpException('Connection Failed');
       }
     } catch (e) {
       return null;

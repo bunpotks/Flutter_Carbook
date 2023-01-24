@@ -49,17 +49,22 @@ class _TestPostState extends State<TestPost> {
       showLoading(context);
       Map<dynamic, dynamic> dataRequest = {"id": "Hello World"};
       await fetch.post('/testapi/testapi.php', dataRequest).then((response) {
-        var res = jsonDecode(response);
         hideloading(context);
         try {
-          if (res['status'] != 'success') throw ('errors');
+          var res = jsonDecode(response);
           if (response != null && res['status'] == 'success') {
             setState(() {
               apiData = TestApiModel.fromJson(res);
             });
+          } else {
+            showDialog(
+                context: context,
+                builder: ((context) => CustomAlertDialog(
+                      desc: 'ไม่พบข้อมูลโปรดลองใหม่อีกครั้ง',
+                      press: () => Navigator.pop(context),
+                    )));
           }
         } catch (e) {
-          print(e);
           showDialog(
               context: context,
               builder: ((context) => CustomAlertDialog(
