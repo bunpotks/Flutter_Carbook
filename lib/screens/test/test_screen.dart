@@ -52,18 +52,14 @@ class _TestPostState extends State<TestPost> {
         var res = jsonDecode(response);
         hideloading(context);
         try {
+          if (res['status'] != 'success') throw ('errors');
           if (response != null && res['status'] == 'success') {
             setState(() {
               apiData = TestApiModel.fromJson(res);
             });
-          } else {
-            showDialog(
-                context: context,
-                builder: ((context) => CustomAlertDialog(
-                      press: () => Navigator.pop(context),
-                    )));
           }
         } catch (e) {
+          print(e);
           showDialog(
               context: context,
               builder: ((context) => CustomAlertDialog(
