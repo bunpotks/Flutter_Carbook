@@ -42,6 +42,65 @@ class CustomAlertDialog extends StatelessWidget {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.black,
+                    backgroundColor: kPrimaryColor,
+                    minimumSize: Size(100, 60) // p
+                    ),
+                onPressed: press,
+                child: const Text(
+                  'ยืนยัน',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class CustomConfirmDialog extends StatelessWidget {
+  final String title;
+  final String desc;
+  final press;
+  final cancel;
+
+  const CustomConfirmDialog(
+      {Key? key,
+      required this.title,
+      required this.desc,
+      this.press,
+      this.cancel})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      icon: Icon(
+        Icons.info,
+        size: 50,
+      ),
+      insetPadding: EdgeInsets.all(20),
+      // contentPadding: EdgeInsets.all(20),
+      actionsPadding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+      alignment: Alignment.center,
+      title: Center(
+          child: Text(
+        title,
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      )),
+      content: Text(
+        desc,
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 16),
+      ),
+      actions: [
+        Row(
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.black,
                     backgroundColor: kSecondaryColor,
                     minimumSize: Size(100, 60) // p
 
@@ -71,39 +130,6 @@ class CustomAlertDialog extends StatelessWidget {
               ),
             ),
           ],
-        ),
-      ],
-    );
-  }
-}
-
-class CustomConfirmDialog extends StatelessWidget {
-  final String title;
-  final String desc;
-  final Function? press;
-  final Function? cancel;
-
-  const CustomConfirmDialog(
-      {Key? key,
-      required this.title,
-      required this.desc,
-      this.press,
-      this.cancel})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      title: Text(title),
-      content: Text(desc),
-      actions: [
-        TextButton(
-          onPressed: cancel as void Function()?,
-          child: const Text('Cancel'),
-        ),
-        TextButton(
-          onPressed: press as void Function()?,
-          child: const Text('OK'),
         ),
       ],
     );

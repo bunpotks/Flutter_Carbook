@@ -59,7 +59,8 @@ class _TestPostState extends State<TestPost> {
           } else {
             showDialog(
                 context: context,
-                builder: ((context) => CustomAlertDialog(
+                builder: ((context) => CustomConfirmDialog(
+                      title: "hello",
                       desc: 'ไม่พบข้อมูลโปรดลองใหม่อีกครั้ง',
                       press: () => Navigator.pop(context),
                     )));
@@ -67,11 +68,22 @@ class _TestPostState extends State<TestPost> {
         } catch (e) {
           showDialog(
               context: context,
-              builder: ((context) => CustomAlertDialog(
+              builder: ((context) => CustomConfirmDialog(
+                    title: "hello",
+                    desc:
+                        'ไม่พบข้อมูลโปรดลองใหม่อีกครั้ง ไม่พบข้อมูลโปรดลองใหม่อีกครั้ง',
                     press: () => Navigator.pop(context),
                   )));
         }
       });
+    }
+
+    Press2() {
+      showDialog(
+          context: context,
+          builder: (context) => CustomAlertDialog(
+                press: () => Navigator.pop(context),
+              ));
     }
 
     return Scaffold(
@@ -82,6 +94,7 @@ class _TestPostState extends State<TestPost> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(child: Text('Post'), onPressed: Press),
+            ElevatedButton(child: Text('Post'), onPressed: Press2),
             if (apiData != null) (Text(apiData!.id.toString())),
           ],
         ),
