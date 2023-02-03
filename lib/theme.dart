@@ -12,7 +12,7 @@ ThemeData theme() {
       appBarTheme: appBarTheme(),
       textTheme: textTheme(),
       inputDecorationTheme: inputDecorationTheme(),
-      visualDensity: VisualDensity.adaptivePlatformDensity,
+      // visualDensity: VisualDensity.adaptivePlatformDensity,
       pageTransitionsTheme: PageTransitionsTheme(
         builders: {
           TargetPlatform.android: CupertinoPageTransitionsBuilder(),
@@ -50,7 +50,7 @@ AppBarTheme appBarTheme() {
   return AppBarTheme(
       color: Colors.white,
       elevation: 0,
-      iconTheme: IconThemeData(color: Colors.black),
-      foregroundColor: Colors.black,
+      iconTheme: IconThemeData(color: Colors.white),
+      foregroundColor: Colors.white,
       centerTitle: true);
 }

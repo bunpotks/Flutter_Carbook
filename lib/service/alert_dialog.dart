@@ -1,3 +1,5 @@
+import 'package:carbook/constants.dart';
+import 'package:carbook/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomAlertDialog extends StatelessWidget {
@@ -15,12 +17,60 @@ class CustomAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text(title),
-      content: Text(desc),
+      icon: Icon(
+        Icons.info,
+        size: 50,
+      ),
+      insetPadding: EdgeInsets.all(20),
+      // contentPadding: EdgeInsets.all(20),
+      actionsPadding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+      alignment: Alignment.center,
+      title: Center(
+          child: Text(
+        title,
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      )),
+      content: Text(
+        desc,
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 16),
+      ),
       actions: [
-        TextButton(
-          onPressed: press,
-          child: const Text('OK'),
+        Row(
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.black,
+                    backgroundColor: kSecondaryColor,
+                    minimumSize: Size(100, 60) // p
+
+                    ),
+                onPressed: press,
+                child: const Text(
+                  'ยกเลิก',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.black,
+                    backgroundColor: kPrimaryColor,
+                    minimumSize: Size(100, 60) // p
+                    ),
+                onPressed: press,
+                child: const Text(
+                  'ยืนยัน',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     );

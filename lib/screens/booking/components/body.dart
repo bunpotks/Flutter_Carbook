@@ -4,8 +4,6 @@ import 'package:carbook/constants.dart';
 import 'package:carbook/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:carbook/main.dart';
-import 'package:carbook/service/notification_service.dart';
 import 'package:intl/intl.dart';
 
 class Body extends StatefulWidget {
@@ -21,59 +19,9 @@ class _BodyState extends State<Body> {
 
   bool _notificationsEnabled = false;
 
-  final NotificationService notification = NotificationService();
-
   @override
   void initState() {
     super.initState();
-    _isAndroidPermissionGranted();
-    _requestPermissions();
-    // _configureDidReceiveLocalNotificationSubject();
-    // _configureSelectNotificationSubject();
-  }
-
-  Future<void> _isAndroidPermissionGranted() async {
-    if (Platform.isAndroid) {
-      final bool granted = await flutterLocalNotificationsPlugin
-              .resolvePlatformSpecificImplementation<
-                  AndroidFlutterLocalNotificationsPlugin>()
-              ?.areNotificationsEnabled() ??
-          false;
-
-      setState(() {
-        _notificationsEnabled = granted;
-      });
-    }
-  }
-
-  Future<void> _requestPermissions() async {
-    if (Platform.isIOS || Platform.isMacOS) {
-      await flutterLocalNotificationsPlugin
-          .resolvePlatformSpecificImplementation<
-              IOSFlutterLocalNotificationsPlugin>()
-          ?.requestPermissions(
-            alert: true,
-            badge: true,
-            sound: true,
-          );
-      await flutterLocalNotificationsPlugin
-          .resolvePlatformSpecificImplementation<
-              MacOSFlutterLocalNotificationsPlugin>()
-          ?.requestPermissions(
-            alert: true,
-            badge: true,
-            sound: true,
-          );
-    } else if (Platform.isAndroid) {
-      final AndroidFlutterLocalNotificationsPlugin? androidImplementation =
-          flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
-              AndroidFlutterLocalNotificationsPlugin>();
-
-      final bool? granted = await androidImplementation?.requestPermission();
-      setState(() {
-        _notificationsEnabled = granted ?? false;
-      });
-    }
   }
 
   // Future<void> _configureDidReceiveLocalNotificationSubject() async {
@@ -114,8 +62,6 @@ class _BodyState extends State<Body> {
   @override
   void dispose() {
     super.dispose();
-    didReceiveLocalNotificationStream.close();
-    selectNotificationStream.close();
   }
 
   @override
@@ -322,16 +268,8 @@ class _BodyState extends State<Body> {
   Widget BtnNoti() {
     return Column(
       children: [
-        ElevatedButton(
-            child: Text('BasicNotification'),
-            onPressed: () {
-              notification.showNotification();
-            }),
-        ElevatedButton(
-            child: Text('Repeat'),
-            onPressed: () {
-              notification.repeatNotification();
-            })
+        ElevatedButton(child: Text('BasicNotification'), onPressed: () {}),
+        ElevatedButton(child: Text('Repeat'), onPressed: () {})
       ],
     );
   }
