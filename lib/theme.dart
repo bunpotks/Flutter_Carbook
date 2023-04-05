@@ -4,7 +4,7 @@ import 'constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-      useMaterial3: true,
+      useMaterial3: false,
       primarySwatch: Colors.blue,
       // brightness: Brightness.dark,
       scaffoldBackgroundColor: Colors.white,
@@ -50,7 +50,7 @@ AppBarTheme appBarTheme() {
   return AppBarTheme(
       color: Colors.white,
       elevation: 0,
-      iconTheme: IconThemeData(color: Colors.white),
-      foregroundColor: Colors.white,
+      iconTheme: IconThemeData(color: Colors.black),
+      foregroundColor: Colors.black,
       centerTitle: true);
 }

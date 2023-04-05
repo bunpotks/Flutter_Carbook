@@ -17,6 +17,9 @@ class CustomAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20), // <-- Radius
+      ),
       icon: Icon(
         Icons.info,
         size: 50,
@@ -76,6 +79,10 @@ class CustomConfirmDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20), // <-- Radius
+      ),
+      // shape: ShapeDecoration(shape: ),
       icon: Icon(
         Icons.info,
         size: 50,
@@ -144,6 +151,9 @@ class CustomLoadingDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20), // <-- Radius
+      ),
       // The background color
       backgroundColor: Colors.white,
       child: Padding(

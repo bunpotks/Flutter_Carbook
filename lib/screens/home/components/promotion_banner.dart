@@ -60,16 +60,21 @@ class PromotionBaner extends StatelessWidget {
       margin: EdgeInsets.only(top: getProportionateScreenWidth(10)),
       child: CarouselSlider(
         options: CarouselOptions(
+            enlargeCenterPage: false,
+            autoPlay: true,
+            autoPlayCurve: Curves.linear,
+            enableInfiniteScroll: true,
+            aspectRatio: 3 / 2,
+            viewportFraction: 0.95,
             height: MediaQuery.of(context).size.width > 900
                 ? MediaQuery.of(context).size.width * 0.40
-                : MediaQuery.of(context).size.width * 0.43,
-            autoPlay: true,
+                : MediaQuery.of(context).size.width * 0.55,
             autoPlayAnimationDuration: Duration(milliseconds: 1500),
             autoPlayInterval: Duration(seconds: 5)),
         items: promotionList.map((i) {
           return Builder(
             builder: (BuildContext context) {
-              return DiscountBaner(i);
+              return DiscountBanner(i);
             },
           );
         }).toList(),
@@ -77,34 +82,14 @@ class PromotionBaner extends StatelessWidget {
     );
   }
 
-  Container DiscountBaner(PromotionModel item) {
+  Container DiscountBanner(PromotionModel item) {
     return Container(
-      width: double.infinity,
       margin: EdgeInsets.all(getProportionateScreenWidth(5)),
-      padding: EdgeInsets.symmetric(
-        horizontal: getProportionateScreenWidth(20),
-        vertical: getProportionateScreenWidth(20),
-      ),
       decoration: BoxDecoration(
           // color: Color(0xFF4A3298),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(18),
           image: DecorationImage(
               image: NetworkImage(item.image!), fit: BoxFit.fill)),
-      child: Text.rich(
-        TextSpan(
-          style: TextStyle(color: Colors.white),
-          children: [
-            // TextSpan(text: '${item.title} \n'),
-            // TextSpan(
-            //   text: '${item.bigText} \n',
-            //   style: TextStyle(
-            //     fontSize: getProportionateScreenWidth(24),
-            //     fontWeight: FontWeight.bold,
-            //   ),
-            // ),
-          ],
-        ),
-      ),
     );
   }
 }
