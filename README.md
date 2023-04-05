@@ -18,7 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 <p align="center">
-  <img src="https://github.com/noteyn51/FlutterCarbook/blob/main/assets/images/intros.gif" width="1000"/>
+  <img src="assets/images/intros.gif" width="1000"/>
 </p>
   
 
@@ -26,42 +26,34 @@ samples, guidance on mobile development, and a full API reference.
 ## Splash Screen
 
 <p float="left">
-<kbd>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s1.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s2.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s3.png" alt="drawing" width="200"/>
-</kbd>
+<img src="screenshot/s1.png" alt="drawing" width="200"/>
+<img src="screenshot/s2.png" alt="drawing" width="200"/>
+<img src="screenshot/s3.png" alt="drawing" width="200"/>
 
 </p>
 
 ## Register & Signin Screen
 
 <p float="left">
-<kbd>
 
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s4.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s5.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s6.png" alt="drawing" width="200"/>
-</kbd>
+<img src="screenshot/s4.png" alt="drawing" width="200"/>
+<img src="screenshot/s5.png" alt="drawing" width="200"/>
+<img src="screenshot/s6.png" alt="drawing" width="200"/>
 
 </p>
 
 <p float="left">
-<kbd>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s7.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s8.png" alt="drawing" width="200"/>
-</kbd>
+<img src="screenshot/s7.png" alt="drawing" width="200"/>
+<img src="screenshot/s8.png" alt="drawing" width="200"/>
 
 </p>
 
 ## Menu & Profile Screen
 
 <p float="left">
-<kbd>
 
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s9.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s18.png" alt="drawing" width="200"/>
-</kbd>
+<img src="screenshot/s9.png" alt="drawing" width="200"/>
+<img src="screenshot/s18.png" alt="drawing" width="200"/>
 
 </p>
 
@@ -69,35 +61,29 @@ samples, guidance on mobile development, and a full API reference.
 ## Booking Screen
 
 <p float="left">
-<kbd>
 
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s10.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s11.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s12.png" alt="drawing" width="200"/>
-</kbd>
+<img src="screenshot/s10.png" alt="drawing" width="200"/>
+<img src="screenshot/s11.png" alt="drawing" width="200"/>
+<img src="screenshot/s12.png" alt="drawing" width="200"/>
 
 </p>
 
 ## Passenger Profile & Booking List & Coupon  Screen
 
 <p float="left">
-<kbd>
 
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s13.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s14.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s15.png" alt="drawing" width="200"/>
-</kbd>
+<img src="screenshot/s13.png" alt="drawing" width="200"/>
+<img src="screenshot/s14.png" alt="drawing" width="200"/>
+<img src="screenshot/s15.png" alt="drawing" width="200"/>
 
 </p>
 
 ## History Screen
 
 <p float="left">
-<kbd>
 
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s16.png" alt="drawing" width="200"/>
-<img src="https://github.com/noteyn51/FlutterCarbook/blob/main/screenshot/s17.png" alt="drawing" width="200"/>
-</kbd>
+<img src="screenshot/s16.png" alt="drawing" width="200"/>
+<img src="screenshot/s17.png" alt="drawing" width="200"/>
 
 </p>
 
